@@ -5,6 +5,7 @@ import Category from 'components/category/category'
 import Cart from 'components/cart/cart'
 import Own from 'components/own/own'
 import Brands from 'components/brands/brands'
+import Search from 'components/search/search'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -31,6 +32,10 @@ export default new Router({
     {
       path: '/brands',
       component: Brands
+    },
+    {
+      path: '/search',
+      component: Search
     }
   ]
 })

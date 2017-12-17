@@ -5,7 +5,7 @@
         <span class="span1 f_l current"><a href="#">分类</a></span>
         <span class="span2 f_r"><router-link to="/brands">品牌</router-link></span>
       </div>
-      <a href="#"><i class="head_right_img"></i></a>
+      <router-link to="/search"><i class="head_right_img"></i></router-link>
     </div>
 
     <div class="main">
