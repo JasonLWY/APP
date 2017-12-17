@@ -1,0 +1,756 @@
+<template>
+  <div class="index_container">
+    <!--头部组件-->
+    <div class="index_head">
+      <div class="head_top">
+        <span class="span1">狗狗站</span>
+        <div class="span2"></div>
+        <span class="span3">深圳</span>
+        <input class="search" type="text" placeholder="搜索商品和品牌">
+        <i class="search_img"></i>
+        <a href="#"> <i class="chat_img"></i></a>
+      </div>
+      <div class="head_bottom clearfix">
+        <ul class="bottom_ul">
+          <li><a class="current" href="#">首页</a></li>
+          <li><a href="#">零食玩具</a></li>
+          <li><a href="#">零食玩具</a></li>
+          <li><a href="#">零食玩具</a></li>
+          <li><a href="#">零食</a></li>
+          <li><a href="#">零食玩具</a></li>
+          <li><a href="#">零食玩具</a></li>
+        </ul>
+      </div>
+      <div class="hr"></div>
+    </div>
+    <!--轮播组件-->
+    <div class="index_carousel">
+      <ul class="index_carousel_images clearfix">
+        <li><a href="#"><img src="./LB4.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./LB1.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./LB2.png" alt=""></a></li>
+        <li><a href="#"><img src="./LB3.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./LB4.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./LB1.jpg" alt=""></a></li>
+      </ul>
+      <ul class="index_carousel clearfix">
+        <li class="current"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <!--分类组件-->
+    <div class="index_category">
+      <div class="category_1">
+        <ul class="clearfix">
+          <li><a href="#"><img src="./tap1.jpg" alt=""></a></li>
+          <li><a href="#"><img src="./t3.jpg" alt=""></a></li>
+          <li><a href="#"><img src="./t3.jpg" alt=""></a></li>
+          <li><a href="#"><img src="./t4.jpg" alt=""></a></li>
+          <li><a href="#"><img src="./t5.jpg" alt=""></a></li>
+        </ul>
+      </div>
+      <div class="category_1">
+        <ul class="clearfix">
+          <li><a href="#"><img src="./t8.jpg" alt=""></a></li>
+          <li><a href="#"><img src="./t7.jpg" alt=""></a></li>
+          <li><a href="#"><img src="./t8.jpg" alt=""></a></li>
+          <li><a href="#"><img src="./t9.jpg" alt=""></a></li>
+          <li><a href="#"><img src="./t10.jpg" alt=""></a></li>
+        </ul>
+      </div>
+    </div>
+    <!--抢购组件-->
+    <div class="index_P_buying">
+      <div class="P_buying_top">
+        <i class="img_left"></i>
+        <span class="Seckill">
+                        距离本场结束
+                        <ul class='f_l clearfix'>
+						<li>0</li>
+						<li>0</li>
+						<li>:</li>
+						<li>0</li>
+						<li>0</li>
+						<li>:</li>
+						<li>0</li>
+						<li>0</li>
+					</ul>
+                    </span>
+        <i class="img_right"></i>
+      </div>
+      <div class="P_buying_list">
+        <ul class="list_ul clearfix">
+          <li>
+            <a href="#"><img src="./buy1.jpg"></a>
+            <span>￥1.22</span><br>
+            <span>省￥11.22</span>
+          </li>
+          <li>
+            <a href="#"><img src="./buy1.jpg"></a>
+            <span>￥1.22</span><br>
+            <span>省￥11.22</span>
+          </li>
+          <li>
+            <a href="#"><img src="./buy1.jpg"></a>
+            <span>￥1.22</span><br>
+            <span>省￥11.22</span>
+          </li>
+          <li>
+            <a href="#"><img src="./buy1.jpg"></a>
+            <span>￥1.22</span><br>
+            <span>省￥11.22</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--discount组件-->
+    <div class="index_discount">
+      <div class="discount_img">
+        <img src="./discount.jpg">
+      </div>
+    </div>
+    <!--recommend组件-->
+    <div class="index_recommend clearfix">
+      <div class="recommend_imgR f_l">
+        <img src="./img_R.jpg" alt="">
+      </div>
+      <div class="hr"></div>
+      <div class="recommend_imgL f_r">
+        <div class="img1"><img src="./img_l1.jpg" alt=""></div>
+        <div class="hr"></div>
+        <div class="img2 clearfix"><img src="./img_l2.jpg" alt=""></div>
+      </div>
+    </div>
+
+    <!--sale组件-->
+    <div class="index_sale">
+      <div class="sale_top">
+        <i class="img_left"></i>
+        <i class="img_right"></i>
+      </div>
+      <div class="sale_list">
+        <img src="./list1.jpg" alt="">
+      </div>
+      <div class="sale_list">
+        <img src="./list2.jpg" alt="">
+      </div>
+      <div class="sale_list">
+        <img src="./list3.jpg" alt="">
+      </div>
+      <div class="sale_list">
+        <img src="./list4.jpg" alt="">
+      </div>
+      <div class="sale_list">
+        <img src="./list5.jpg" alt="">
+      </div>
+      <div class="sale_list">
+        <img src="./list6.jpg" alt="">
+      </div>
+      <div class="sale_list">
+        <img src="./list7.jpg" alt="">
+      </div>
+    </div>
+    <!--体验馆组件-->
+    <div class="index_experience_hall">
+      <div class="experience_hall_top">
+        <i class="img_left"></i>
+        <i class="img_right"></i>
+      </div>
+      <div class="index_carousel experience_hall">
+        <ul class="index_carousel_images clearfix">
+          <li><a href="#"><img src="./LB4.jpg" alt=""></a></li>
+          <li><a href="#"><img src="./LB1.jpg" alt=""></a></li>
+          <li><a href="#"><img src="./LB2.png" alt=""></a></li>
+          <li><a href="#"><img src="./LB3.jpg" alt=""></a></li>
+          <li><a href="#"><img src="./LB4.jpg" alt=""></a></li>
+          <li><a href="#"><img src="./LB1.jpg" alt=""></a></li>
+        </ul>
+        <ul class="index_carousel clearfix">
+          <li class="current"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+    <!--萌宠说组件-->
+    <div class="index_experience_hall adorable_pet">
+      <div class="experience_hall_top adorable_pet_top">
+        <i class="img_left"></i>
+        <i class="img_right"></i>
+      </div>
+      <div class="sale_list adorable_pet_list">
+        <img src="./shiping.jpg" alt="">
+      </div>
+      <div class="adorable_pet_text">第2期-猫啪啪啪的时候爽吗？</div>
+      <div class="adorable_pet_look"><i>观看数</i><i></i><i>2222</i></div>
+    </div>
+    <!--小剧场-->
+    <div class="index_experience_hall adorable_pet Theatre">
+      <div class="experience_hall_top adorable_pet_top Theatre_top">
+        <i class="img_left"></i>
+        <i class="img_right"></i>
+      </div>
+      <div class="sale_list adorable_pet_list Theatre_list">
+        <img src="./T.jpg" alt="">
+      </div>
+      <div class="adorable_pet_text">第2期-猫啪啪啪的时候爽吗？</div>
+      <div class="adorable_pet_look"><i>观看数</i><i></i><i>2222</i></div>
+    </div>
+    <div class="while"></div>
+    <!--footer组件-->
+    <f-footer></f-footer>
+  </div>
+</template>
+<script>
+  import FFooter from 'components/footer/footer'
+  export default {
+    components: {
+      FFooter
+    }
+  }
+</script>
+<style lang="less">
+  @import "~common/css/public";
+
+  @rem: 750/16rem;
+  .index_container {
+    width: 100%;
+    background: #F3F4F6;
+    /*头部部分*/
+    .index_head {
+      width: 100%;
+      height: 190/@rem;
+      position: relative;
+      .head_top {
+        width: 100%;
+        height: 70/@rem;
+        margin-top: 0/@rem;
+        position: relative;
+        input {
+          padding: 10/@rem 0;
+          margin-left: 15/@rem;
+          border-radius: 10/@rem;
+          background: #E9E9E9;
+          color: #000000;
+          width: 439/@rem;
+          padding-left: 24/@rem;
+        }
+        span {
+          color: #908B8D;
+          font-size: 28/@rem;
+          font-weight: 600;
+        }
+        .span1 {
+          margin-left: 20/@rem;
+        }
+        .span2 {
+          position: absolute;
+          top: 10/@rem;
+          left: 108/@rem;
+          height: 50/@rem;
+          width: 2px;
+          background: #908B8D;
+        }
+        .search_img {
+          position: absolute;
+          top: 30/@rem;
+          right: 118/@rem;
+          display: inline-block;
+          width: 24/@rem;
+          height: 24/@rem;
+          background-image: url("./search.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .chat_img {
+          display: inline-block;
+          position: absolute;
+          top: 20/@rem;
+          right: 30/@rem;
+          width: 40/@rem;
+          height: 40/@rem;
+          background-image: url("./chat.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+      .head_bottom {
+        width: 100%;
+        margin-top: 40/@rem;
+        overflow: hidden;
+        .bottom_ul {
+          width: 150%;
+          display: flex;
+          text-align: center;
+          padding-right: 40/@rem;
+          li {
+            flex: 1;
+            float: left;
+            a {
+              display: inline-block;
+              font-size: 28/@rem;
+              font-weight: 600;
+              color: #706D73;
+            }
+            .current {
+              color: #389C42;
+              border-bottom: 2px solid #389C42;;
+            }
+          }
+        }
+      }
+      .hr {
+        width: 684/@rem;
+        height: 1px;
+        position: absolute;
+        background: rgba(112, 109, 115, .5);
+        bottom: 0;
+        left: 46/@rem;
+      }
+    }
+    /*轮播部分*/
+    .index_carousel {
+      width: 100%;
+      overflow: hidden;
+      background: #ffffff;
+      /*索引定位*/
+      position: relative;
+      .index_carousel_images {
+        /*4倍宽度  横向 四张图片*/
+        width: 600%;
+        -webkit-transform: translateX(-16.667%);
+        transform: translateX(-16.667%);
+        li {
+          float: left;
+          width: 16.6667%;
+          a {
+            display: block;
+            width: 100%;
+            img {
+              display: block;
+              width: 100%;
+            }
+          }
+        }
+      }
+      /*小图标*/
+      .index_carousel {
+        position: absolute;
+        bottom: 30/@rem;
+        left: 50%;
+        margin-left: -20/@rem;
+        background: rgba(255, 255, 255, 0.1);
+        li {
+          float: left;
+          width: 10/@rem;
+          height: 10/@rem;
+          border-radius: 50%;
+          border: 1px solid white;
+          margin-left: 5/@rem;
+        }
+        .current {
+          background-color: deeppink
+        }
+      }
+    }
+
+    /*category部分*/
+
+    .index_category {
+      width: 100%;
+      height: 366/@rem;
+      background: #ffffff;
+      .category_1 {
+        width: 100%;
+        margin-top: 0/@rem;
+        ul {
+          width: 100%;
+          display: flex;
+          text-align: center;
+          li {
+            float: left;
+            flex: 1;
+            a {
+              img {
+                width: 145/@rem;
+              }
+            }
+          }
+        }
+      }
+
+    }
+    /*秒杀组件*/
+    .index_P_buying {
+      width: 100%;
+      height: 400/@rem;
+      position: relative;
+      background: #ffffff;
+      .P_buying_top {
+        width: 100%;
+        margin-top: 30/@rem;
+        .img_left {
+          margin: 28/@rem 0 0 0;;
+          position: absolute;
+          top: 0;
+          left: -25/@rem;
+          width: 230/@rem;
+          height: 60/@rem;
+          background-image: url("./suprice.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        text-align: center;
+        line-height: 90/@rem;
+        .Seckill {
+          display: block;
+          position: relative;
+          font-size: 28/@rem;
+          margin-left: -100/@rem;
+          /*i{
+            font-style: normal;
+            border: 1px solid #A7A7A5;
+            padding: 5/@rem 5/@rem 5/@rem 5/@rem;
+          }*/
+          ul {
+            width: 149/@rem;
+            position: absolute;
+            left: 525/@rem;
+            top: 19/@rem;
+            line-height: 50/@rem;
+            background: #A2EE7C;
+            border-radius: 10/@rem;
+            padding-left: 20/@rem;
+            box-shadow: 1px 1px #33DA82;
+            li {
+              height: 50/@rem;
+              float: left;
+            }
+          }
+        }
+        .img_right {
+          position: absolute;
+          top: 34/@rem;
+          right: 32/@rem;
+          width: 100/@rem;
+          height: 50/@rem;
+          background-image: url("./more1.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+      .P_buying_list {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 50/@rem;
+        .list_ul {
+          width: 125%;
+          height: 245/@rem;
+          display: flex;
+          text-align: center;
+          padding-right: 40/@rem;
+          li {
+            flex: 1;
+            float: left;
+            position: relative;
+            a {
+              display: inline-block;
+              width: 160/@rem;
+              height: 160/@rem;
+              display: inline-block;
+              font-size: 28/@rem;
+              font-weight: 600;
+              color: #706D73;
+              img {
+                display: inline-block;
+                width: 100%;
+              }
+            }
+            span:nth-of-type(1) {
+              font-style: normal;
+              color: red;
+              font-size: 28/@rem;
+              font-weight: 600;
+              position: absolute;
+              bottom: 40/@rem;
+              left: 50/@rem;
+            }
+            span:nth-of-type(2) {
+              color: #A7A7A5;
+              font-style: normal;
+              font-size: 14/@rem;
+              position: absolute;
+              bottom: 0/@rem;
+              left: 50/@rem;
+            }
+          }
+        }
+      }
+    }
+    .index_discount {
+      width: 100%;
+      height: 380/@rem;
+      margin-top: 30/@rem;
+      background: #FFFFF3;
+      .discount_img {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .index_recommend {
+      width: 100%;
+      height: 500/@rem;
+      margin-top: 20/@rem;
+      position: relative;
+      .recommend_imgR {
+        width: 380/@rem;
+        img {
+          width: 100%;
+          margin: 2/@rem;
+        }
+      }
+      .hr {
+        height: 480/@rem;
+        width: 1px;
+        background: #DEDEDE;
+        position: absolute;
+        top: 30/@rem;
+        left: 380/@rem;
+      }
+      .recommend_imgL {
+        width: 367/@rem;
+        .hr {
+          height: 1px;
+          background: #DEDEDE;
+          width: 350/@rem;
+          position: absolute;
+          top: 50%;
+          right: 10/@rem;
+        }
+        .img2 {
+          width: 100%;
+          height: 250/@rem;
+          position: relative;
+          img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 2/@rem;
+            left: 0;
+          }
+        }
+        .img1 {
+          width: 100%;
+          height: 251/@rem;
+          position: relative;
+          img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+    /*特卖组件*/
+    .index_sale {
+      width: 100%;
+      /*height: 400/@rem;*/
+      position: relative;
+      background: #ffffff;
+      .sale_top {
+        width: 100%;
+        margin-top: 18/@rem;
+        height: 176/@rem;
+        .img_left {
+          margin: 28/@rem 0 0 0;;
+          position: absolute;
+          top: 0;
+          left: 20/@rem;
+          width: 330/@rem;
+          height: 110/@rem;
+          background-image: url("./recomment.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        text-align: center;
+        line-height: 90/@rem;
+        .img_right {
+          position: absolute;
+          top: 34/@rem;
+          right: 32/@rem;
+          width: 100/@rem;
+          height: 50/@rem;
+          background-image: url("./more1.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+      .sale_list {
+        width: 100%;
+        margin-top: 20/@rem;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    /*体验馆组件*/
+    .index_experience_hall {
+      width: 100%;
+      /*height: 400/@rem;*/
+      position: relative;
+      background: #ffffff;
+      .experience_hall_top {
+        width: 100%;
+        margin-top: 18/@rem;
+        height: 176/@rem;
+        .img_left {
+          margin: 28/@rem 0 0 0;;
+          position: absolute;
+          top: 0;
+          left: 20/@rem;
+          width: 330/@rem;
+          height: 110/@rem;
+          background-image: url("./tiyan.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        text-align: center;
+        line-height: 90/@rem;
+        .img_right {
+          position: absolute;
+          top: 34/@rem;
+          right: 32/@rem;
+          width: 100/@rem;
+          height: 50/@rem;
+          background-image: url("./more1.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+    /*萌宠说*/
+    .adorable_pet {
+      width: 100%;
+      /*height: 400/@rem;*/
+      position: relative;
+      background: #ffffff;
+      .adorable_pet_top {
+        width: 100%;
+        margin-top: 18/@rem;
+        height: 156/@rem;
+        .img_left {
+          margin: 28/@rem 0 0 0;;
+          position: absolute;
+          top: 0;
+          left: 20/@rem;
+          width: 330/@rem;
+          height: 110/@rem;
+          background-image: url("./cats.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        text-align: center;
+        line-height: 90/@rem;
+        .img_right {
+          position: absolute;
+          top: 34/@rem;
+          right: 32/@rem;
+          width: 100/@rem;
+          height: 50/@rem;
+          background-image: url("./more1.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+      .sale_list {
+        width: 100%;
+        margin-top: 20/@rem;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .adorable_pet {
+      height: 714/@rem;
+      .adorable_pet_text {
+        text-align: center;
+        font-size: 20/@rem;
+      }
+      .adorable_pet_look {
+        text-align: center;
+        font-size: 20/@rem;
+        position: relative;
+        color: #A7A7A5;
+        i {
+          line-height: 60/@rem;
+          font-style: normal;
+          color: #A7A7A5;
+          margin-left: 20/@rem;
+        }
+        i:nth-of-type(2) {
+          height: 20/@rem;
+          width: 1px;
+          background: #A7A7A5;
+          position: absolute;
+          top: 20/@rem;
+          left: 50%;
+        }
+        i:nth-of-type(3) {
+          margin-left: 80/@rem;
+        }
+      }
+    }
+    /*小剧场*/
+    .Theatre {
+      width: 100%;
+      /*height: 400/@rem;*/
+      position: relative;
+      background: #ffffff;
+      .Theatre_top {
+        width: 100%;
+        margin-top: 18/@rem;
+        height: 156/@rem;
+        .img_left {
+          margin: 28/@rem 0 0 0;;
+          position: absolute;
+          top: 0;
+          left: 20/@rem;
+          width: 330/@rem;
+          height: 110/@rem;
+          background-image: url("./Theatre.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        text-align: center;
+        line-height: 90/@rem;
+        .img_right {
+          position: absolute;
+          top: 34/@rem;
+          right: 32/@rem;
+          width: 100/@rem;
+          height: 50/@rem;
+          background-image: url("./more1.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+      .sale_list {
+        width: 100%;
+        margin-top: 20/@rem;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .while {
+      height: 95/@rem;
+    }
+  }
+</style>
