@@ -1,19 +1,19 @@
 <template>
   <div class="footer_wrap clearfix">
     <div class="footer">
-      <div><a class="current" href="#"><img src="./index_1.png" alt=""><br>主页</a></div>
-      <div><a href="#"><img src="./Category_0.png" alt=""><br>分类</a></div>
-      <div><a href="#"><img src="./cart_0.png" alt=""><br>购物车</a></div>
-      <div><a href="#"><img src="./account_0.png" alt=""><br>我的</a></div>
+      <div><router-link class="current" to="/"><img src="./index_1.png" alt=""><br>主页</router-link></div>
+      <div><router-link to="/category"><img src="./Category_0.png" alt=""><br>分类</router-link></div>
+      <div><router-link to="/cart"><img src="./cart_0.png" alt=""><br>购物车</router-link></div>
+      <div><router-link to="/own"><img src="./account_0.png" alt=""><br>我的</router-link></div>
     </div>
   </div>
 </template>
 <script>
-  export default {}
+  export default {
+  }
 </script>
 <style scoped lang="less">
   @rem: 750/16rem;
-  .index_container {
     .footer_wrap {
       width: 100%;
       background: #FFFFFF;
@@ -46,7 +46,7 @@
             color: #FCB0BA;
           }
         }
-      }
+
     }
   }
 </style>

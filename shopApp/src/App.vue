@@ -3,12 +3,17 @@
     <keep-alive>
       <router-view/>
     </keep-alive>
+    <f-footer></f-footer>
   </div>
 </template>
 
 <script>
+  import FFooter from 'components/footer/footer'
   export default {
-    name: 'app'
+    name: 'app',
+    components: {
+      FFooter
+    }
   }
 </script>
 

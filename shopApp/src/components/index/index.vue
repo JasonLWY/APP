@@ -201,15 +201,12 @@
     </div>
     <div class="while"></div>
     <!--footer组件-->
-    <f-footer></f-footer>
+    <!--<f-footer></f-footer>-->
   </div>
 </template>
 <script>
-  import FFooter from 'components/footer/footer'
+//  import FFooter from 'components/footer/footer'
   export default {
-    components: {
-      FFooter
-    }
   }
 </script>
 <style lang="less">
