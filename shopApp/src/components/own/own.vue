@@ -21,25 +21,25 @@
       <ul class="f_l clearfix">
         <li>
           <a href="#">
-            <img src="images/not_pay.png" alt=""><br>
+            <img src="./not_pay.png" alt=""><br>
             <span>待付款</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <img src="images/not_get.png" alt=""><br>
+            <img src="./not_get.png" alt=""><br>
             <span>待收货</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <img src="images/not_discount.png" alt=""><br>
+            <img src="./not_discount.png" alt=""><br>
             <span>待评价</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <img src="images/all_order.png" alt=""><br>
+            <img src="./all_order.png" alt=""><br>
             <span>全部订单</span>
           </a>
         </li>
@@ -68,7 +68,7 @@
         </li>
         <li>
           <a href="#">
-            <img src="images/bullde_inco.png" alt=""><br>
+            <img src="./bullde_inco.png" alt=""><br>
             <span>全部订单</span>
           </a>
         </li>
@@ -99,7 +99,8 @@
 
   }
 </script>
-<style scoped lang="less">
+<style lang="less">
+  @import "~common/css/public";
   @rem:750/16rem;
   .own_container {
     width: 100%;
@@ -211,7 +212,6 @@
         }
       }
     }
-
     .taobao_order {
       width: 100%;
       height: 113/@rem;
@@ -232,6 +232,6 @@
     }
     .while {
       height: 135/@rem;
-    }
+      }
   }
 </style>
