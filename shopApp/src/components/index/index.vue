@@ -6,7 +6,7 @@
         <span class="span1">狗狗站</span>
         <div class="span2"></div>
         <span class="span3">深圳</span>
-        <input class="search" type="text" placeholder="搜索商品和品牌">
+        <input @click="search" class="search" type="text" placeholder="搜索商品和品牌">
         <i class="search_img"></i>
         <a href="#"> <i class="chat_img"></i></a>
       </div>
@@ -207,6 +207,11 @@
 <script>
 //  import FFooter from 'components/footer/footer'
   export default {
+    methods: {
+      search() {
+        this.$router.push('/search');
+      }
+    }
   }
 </script>
 <style lang="less">

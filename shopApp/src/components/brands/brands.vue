@@ -7,13 +7,13 @@
       </div>
       <router-link to="/search"><i class="head_right_img"></i></router-link>
     </div>
-    <div class="mian">
+    <div class="mian clearfix">
       <!--content one 组件-->
       <div class="recommend_content content_1 clearfix">
         <div class="content_head">
           <span>—— 推荐品牌 ——</span>
         </div>
-        <div class="brands_list">
+        <div class="brands_list clearfix">
           <ul class="f_l clearfix">
             <li>
               <a href="#">
@@ -102,16 +102,16 @@
           </ul>
         </div>
       </div>
-      <div class="recommend_content content_2 clearfix">
+      <div class="recommend_content content_1 clearfix">
         <div class="content_head">
-          <span>—— 主牌品粮 ——</span>
+          <span>—— 主粮品牌 ——</span>
         </div>
-        <div class="brands_list">
+        <div class="brands_list clearfix">
           <ul class="f_l clearfix">
             <li>
-              <router-link to="/category">
+              <a href="#">
                 <img src="./brands_list2.jpg">
-              </router-link>
+              </a>
               <span>冠能</span> <br>
               <i>美国</i>
             </li>
@@ -196,7 +196,7 @@
         </div>
       </div>
     </div>
-    <div class="while"></div>
+    <!--<div class="while"></div>-->
   </div>
 </template>
 
@@ -204,11 +204,13 @@
   export default {}
 </script>
 <style scoped lang="less">
+  @import "~common/css/public";
   @rem: 750/16rem;
   .brands_container {
     width: 100%;
     background: #F3F4F5;
-    .category_head{
+    position: relative;
+    .brands_head{
       width: 100%;
       height: 100/@rem;
       background: #FFFFFF;
@@ -259,10 +261,10 @@
           width: 100%;
           ul {
             width: 100%;
-            margin-left: 48/@rem;
+            padding-left: 78/@rem;
             margin-top: 30/@rem;
             li {
-              width: 240/@rem;
+              width: 210/@rem;
               height: 225/@rem;
               float: left;
               line-height: 40/@rem;
@@ -292,7 +294,7 @@
       }
     }
     .while {
-      height: 105/@rem;
+      height: 5/@rem;
     }
   }
 </style>
