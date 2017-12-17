@@ -3,7 +3,7 @@
     <div class="category_head">
       <div class="head_tap clearfix">
         <span class="span1 f_l current"><a href="#">分类</a></span>
-        <span class="span2 f_r"><a href="#">品牌</a></span>
+        <span class="span2 f_r"><router-link to="/brands">品牌</router-link></span>
       </div>
       <a href="#"><i class="head_right_img"></i></a>
     </div>
