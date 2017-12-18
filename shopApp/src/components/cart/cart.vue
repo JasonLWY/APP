@@ -2,7 +2,7 @@
   <div class="cart_container">
     <div class="cart_header">
       <!--在vue不用 a 标签  直接路由回调 this.$router.back 既可以-->
-      <a href="#" class="back_img"></a>
+      <a href="javascript: ;" @click="back" class="back_img"></a>
       <span>购物车</span>
       <div class="header_hr"></div>
       <i class="head_right_img"></i>
@@ -18,7 +18,14 @@
 </template>
 
 <script>
-    export default {}
+    export default {
+      methods: {
+        back() {
+          this.$router.back()
+        }
+      }
+
+    }
 </script>
 <style scoped lang="less">
   @rem:750/16rem;

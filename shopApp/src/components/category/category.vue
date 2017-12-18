@@ -31,22 +31,34 @@
         <ul>
           <li><a href="#">
             <img src="./cate1.jpg">
-          </a></li>
+          </a>
+            <p>磨牙洁齿</p>
+          </li>
           <li><a href="#">
             <img src="./cate2.jpg">
-          </a></li>
+          </a>
+            <p>磨牙洁齿</p>
+          </li>
           <li><a href="#">
             <img src="./cate3.jpg">
-          </a></li>
+          </a>
+            <p>磨牙洁齿</p>
+          </li>
           <li><a href="#">
             <img src="./cate4.jpg" alt="">
-          </a></li>
+          </a>
+            <p>磨牙洁齿</p>
+          </li>
           <li><a href="#">
             <img src="./cate5.jpg" alt="">
-          </a></li>
+          </a>
+            <p>磨牙洁齿</p>
+          </li>
           <li><a href="#">
             <img src="./cate6.jpg" alt="">
-          </a></li>
+          </a>
+            <p>磨牙洁齿</p>
+          </li>
         </ul>
       </div>
     </div>
@@ -143,14 +155,18 @@
           color: #99999B;
           margin: 57/@rem 0 0 26/@rem;
         }
-        ul {
-          li {
+        ul{
+          li{
             float: left;
             margin-left: 20/@rem;
             margin-top: 10/@rem;
-            img {
+            text-align: center;
+            img{
               width: 162/@rem;
               height: auto;
+            }
+            p{
+              font-size: 27/@rem;
             }
           }
         }
