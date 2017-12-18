@@ -123,7 +123,6 @@
         <div class="img2 clearfix"><img src="./img_l2.jpg" alt=""></div>
       </div>
     </div>
-
     <!--sale组件-->
     <div class="index_sale">
       <div class="sale_top">
@@ -199,15 +198,15 @@
       <div class="adorable_pet_text">第2期-猫啪啪啪的时候爽吗？</div>
       <div class="adorable_pet_look"><i>观看数</i><i></i><i>2222</i></div>
     </div>
+    <!--留白-->
     <div class="while"></div>
-    <!--footer组件-->
-    <!--<f-footer></f-footer>-->
   </div>
 </template>
 <script>
 //  import FFooter from 'components/footer/footer'
   export default {
     methods: {
+      /*跳转到search路由组件*/
       search() {
         this.$router.push('/search');
       }
@@ -216,7 +215,6 @@
 </script>
 <style lang="less">
   @import "~common/css/public";
-
   @rem: 750/16rem;
   .index_container {
     width: 100%;
