@@ -1,6 +1,5 @@
 <template>
   <div class="index_carousel">
-    {{goods.value}}
     <ul class="index_carousel_images clearfix">
       <li v-for="item in goods[0].value">
         <a href="#"><img :src="item.image" alt=""></a>

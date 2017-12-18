@@ -29,7 +29,6 @@
 <script>
   import {mapState} from 'vuex'
   export default {
-
     methods: {
       /*跳转到search路由组件*/
       search() {

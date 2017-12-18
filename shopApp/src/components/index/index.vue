@@ -6,26 +6,7 @@
     <!--轮播组件-->
     <index-carousel></index-carousel>
     <!--分类组件-->
-    <div class="index_category">
-      <div class="category_1">
-        <ul class="clearfix">
-          <li><a href="#"><img src="./tap1.jpg" alt=""></a></li>
-          <li><a href="#"><img src="./t3.jpg" alt=""></a></li>
-          <li><a href="#"><img src="./t3.jpg" alt=""></a></li>
-          <li><a href="#"><img src="./t4.jpg" alt=""></a></li>
-          <li><a href="#"><img src="./t5.jpg" alt=""></a></li>
-        </ul>
-      </div>
-      <div class="category_1">
-        <ul class="clearfix">
-          <li><a href="#"><img src="./t8.jpg" alt=""></a></li>
-          <li><a href="#"><img src="./t7.jpg" alt=""></a></li>
-          <li><a href="#"><img src="./t8.jpg" alt=""></a></li>
-          <li><a href="#"><img src="./t9.jpg" alt=""></a></li>
-          <li><a href="#"><img src="./t10.jpg" alt=""></a></li>
-        </ul>
-      </div>
-    </div>
+    <index-category></index-category>
     <!--抢购组件-->
     <div class="index_P_buying">
       <div class="P_buying_top">
@@ -171,6 +152,7 @@
   import {mapState} from 'vuex'
   import IndexHeader from 'page/index/index-header/index-header'
   import IndexCarousel from 'page/index/index-carousel/index-carousel'
+  import IndexCategory from 'page/index/index-category/index-category'
   export default {
     /*计算属性 取出来ajax获取的数据*/
     computed: {
@@ -188,7 +170,8 @@
     },
     components: {
       IndexHeader,
-      IndexCarousel
+      IndexCarousel,
+      IndexCategory
     }
   }
 </script>
@@ -261,7 +244,7 @@
         margin-top: 40/@rem;
         overflow: hidden;
         .bottom_ul {
-          width: 150%;
+          width: 144%;
           display: flex;
           text-align: center;
           padding-right: 40/@rem;
@@ -346,11 +329,9 @@
         margin-top: 0/@rem;
         ul {
           width: 100%;
-          display: flex;
           text-align: center;
           li {
             float: left;
-            flex: 1;
             a {
               img {
                 width: 145/@rem;
