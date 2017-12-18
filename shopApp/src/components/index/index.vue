@@ -1,29 +1,8 @@
 <template>
   <div class="index_container">
     <!--头部组件-->
-    <div class="index_head">
-      <div class="head_top">
-        <span class="span1">狗狗站</span>
-        <div class="span2"></div>
-        <span class="span3">深圳</span>
-        <input @click="search" class="search" type="text" placeholder="搜索商品和品牌">
-        <i class="search_img"></i>
-        <a href="#"> <i class="chat_img"></i></a>
-      </div>
-      <div class="head_bottom clearfix">
-        <ul class="bottom_ul">
-          <li><a class="current" href="#">首页</a></li>
-          <li><a href="#">零食玩具</a></li>
-          <li><a href="#">零食玩具</a></li>
-          <li><a href="#">零食玩具</a></li>
-          <li><a href="#">零食</a></li>
-          <li><a href="#">零食玩具</a></li>
-          <li><a href="#">零食玩具</a></li>
-        </ul>
-      </div>
-      <div class="hr"></div>
-    </div>
-    {{goods}}
+    <index-header></index-header>
+   <!-- {{goods}}-->
     <!--轮播组件-->
     <div class="index_carousel">
       <ul class="index_carousel_images clearfix">
@@ -205,7 +184,7 @@
 </template>
 <script>
   import {mapState} from 'vuex'
-
+  import IndexHeader from 'page/index/index-header/index-header'
   export default {
     /*计算属性 取出来ajax获取的数据*/
     computed: {
@@ -220,6 +199,9 @@
       search() {
         this.$router.push('/search');
       }
+    },
+    components: {
+      IndexHeader
     }
   }
 </script>
