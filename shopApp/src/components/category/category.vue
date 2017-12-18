@@ -29,9 +29,9 @@
         <!-- 列表内容 -->
         <!-- ul.clearfix>li*15>a[href='#']>img[src='images/nv-fy.jpg']+p{毛呢大衣} -->
         <ul>
-          <li><a href="#">
+          <li><router-link to="/shop_list">
             <img src="./cate1.jpg">
-          </a>
+          </router-link>
             <p>磨牙洁齿</p>
           </li>
           <li><a href="#">

@@ -6,6 +6,11 @@ import Cart from 'components/cart/cart'
 import Own from 'components/own/own'
 import Brands from 'components/brands/brands'
 import Search from 'components/search/search'
+import Login from 'components/login/login'
+import Register from 'components/register/register'
+import Register_before from 'components/register_before/register_before'
+import Detail from 'components/detail/detail'
+import Shop_list from 'components/shop_list/shop_list'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -36,6 +41,26 @@ export default new Router({
     {
       path: '/search',
       component: Search
+    },
+    {
+      path: '/login',
+      component: Login
+    },
+    {
+      path: '/register_before',
+      component: Register_before
+    },
+    {
+      path: '/register',
+      component: Register
+    },
+    {
+      path: '/detail',
+      component: Detail
+    },
+    {
+      path: '/shop_list',
+      component: Shop_list
     }
   ]
 })

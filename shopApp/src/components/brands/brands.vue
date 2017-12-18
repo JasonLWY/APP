@@ -16,9 +16,9 @@
         <div class="brands_list clearfix">
           <ul class="f_l clearfix">
             <li>
-              <a href="#">
+              <router-link to="/shop_list">
                 <img src="./brands_list1.jpg">
-              </a>
+              </router-link>
               <span>冠能</span> <br>
               <i>美国</i>
             </li>

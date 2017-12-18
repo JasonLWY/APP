@@ -4,7 +4,7 @@
       <div><router-link class="current" to="/"><img src="./index_1.png" alt=""><br>主页</router-link></div>
       <div><router-link to="/category"><img src="./Category_0.png" alt=""><br>分类</router-link></div>
       <div><router-link to="/cart"><img src="./cart_0.png" alt=""><br>购物车</router-link></div>
-      <div><router-link to="/own"><img src="./account_0.png" alt=""><br>我的</router-link></div>
+      <div><router-link to="/login"><img src="./account_0.png" alt=""><br>我的</router-link></div>
     </div>
   </div>
 </template>
