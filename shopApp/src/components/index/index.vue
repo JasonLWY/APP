@@ -4,22 +4,7 @@
     <index-header></index-header>
    <!-- {{goods}}-->
     <!--轮播组件-->
-    <div class="index_carousel">
-      <ul class="index_carousel_images clearfix">
-        <li><a href="#"><img src="./LB4.jpg" alt=""></a></li>
-        <li><a href="#"><img src="./LB1.jpg" alt=""></a></li>
-        <li><a href="#"><img src="./LB2.png" alt=""></a></li>
-        <li><a href="#"><img src="./LB3.jpg" alt=""></a></li>
-        <li><a href="#"><img src="./LB4.jpg" alt=""></a></li>
-        <li><a href="#"><img src="./LB1.jpg" alt=""></a></li>
-      </ul>
-      <ul class="index_carousel clearfix">
-        <li class="current"></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
+    <index-carousel></index-carousel>
     <!--分类组件-->
     <div class="index_category">
       <div class="category_1">
@@ -185,6 +170,7 @@
 <script>
   import {mapState} from 'vuex'
   import IndexHeader from 'page/index/index-header/index-header'
+  import IndexCarousel from 'page/index/index-carousel/index-carousel'
   export default {
     /*计算属性 取出来ajax获取的数据*/
     computed: {
@@ -201,7 +187,8 @@
       }
     },
     components: {
-      IndexHeader
+      IndexHeader,
+      IndexCarousel
     }
   }
 </script>
@@ -348,7 +335,6 @@
         }
       }
     }
-
     /*category部分*/
 
     .index_category {

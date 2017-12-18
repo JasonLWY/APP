@@ -1,7 +1,7 @@
 <template>
   <div class="index_head">
     <div class="head_top">
-      {{menus}}
+      <!--{{menus}}-->
       <span class="span1">狗狗站</span>
       <div class="span2"></div>
       <span class="span3">深圳</span>
@@ -9,17 +9,19 @@
       <i class="search_img"></i>
       <a href="#"> <i class="chat_img"></i></a>
     </div>
-    <div class="head_bottom clearfix">
-      <ul class="bottom_ul">
-        <li><a class="current" href="#">首页</a></li>
-        <li><a href="#">零食玩具</a></li>
-        <li><a href="#">零食玩具</a></li>
-        <li><a href="#">零食玩具</a></li>
-        <li><a href="#">零食</a></li>
-        <li><a href="#">零食玩具</a></li>
-        <li><a href="#">零食玩具</a></li>
-      </ul>
-    </div>
+      <div class="head_bottom clearfix">
+        <ul id="#wrapper" class="bottom_ul">
+          <li v-for="(item, index) in menus">
+            <a href="#">{{item.menu_name}}</a>
+          </li>
+          <!--<li><a class="current"  href="#">零食玩具</a></li>-->
+          <!--<li><a href="#">零食玩具</a></li>-->
+          <!--<li><a href="#">零食玩具</a></li>-->
+          <!--<li><a href="#">零食</a></li>-->
+          <!--<li><a href="#">零食玩具</a></li>-->
+          <!--<li><a href="#">零食玩具</a></li>-->
+        </ul>
+      </div>
     <div class="hr"></div>
   </div>
 </template>
@@ -27,6 +29,7 @@
 <script>
   import {mapState} from 'vuex'
   export default {
+
     methods: {
       /*跳转到search路由组件*/
       search() {
@@ -102,8 +105,9 @@
       width: 100%;
       margin-top: 40/@rem;
       overflow: hidden;
+
       .bottom_ul {
-        width: 150%;
+        width: 144%;
         display: flex;
         text-align: center;
         padding-right: 40/@rem;
