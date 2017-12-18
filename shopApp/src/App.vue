@@ -9,8 +9,10 @@
 
 <script>
   import FFooter from 'components/footer/footer'
+  import axiox from 'axios'
   export default {
     name: 'app',
+
     components: {
       FFooter
     }

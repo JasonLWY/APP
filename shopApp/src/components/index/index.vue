@@ -23,6 +23,7 @@
       </div>
       <div class="hr"></div>
     </div>
+    {{goods}}
     <!--轮播组件-->
     <div class="index_carousel">
       <ul class="index_carousel_images clearfix">
@@ -203,8 +204,17 @@
   </div>
 </template>
 <script>
-//  import FFooter from 'components/footer/footer'
+  import {mapState} from 'vuex'
+
   export default {
+    /*计算属性 取出来ajax获取的数据*/
+    computed: {
+      ...mapState(['goods'])
+    },
+    mounted () {
+      // 发送ajax请求获取seller并更新状态
+      this.$store.dispatch('reqGoods')
+    },
     methods: {
       /*跳转到search路由组件*/
       search() {
