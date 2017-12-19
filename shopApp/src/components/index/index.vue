@@ -98,28 +98,7 @@
       </div>
     </div>
     <!--体验馆组件-->
-    <div class="index_experience_hall">
-      <div class="experience_hall_top">
-        <i class="img_left"></i>
-        <i class="img_right"></i>
-      </div>
-      <div class="index_carousel experience_hall">
-        <ul class="index_carousel_images clearfix">
-          <li><a href="#"><img src="./LB4.jpg" alt=""></a></li>
-          <li><a href="#"><img src="./LB1.jpg" alt=""></a></li>
-          <li><a href="#"><img src="./LB2.png" alt=""></a></li>
-          <li><a href="#"><img src="./LB3.jpg" alt=""></a></li>
-          <li><a href="#"><img src="./LB4.jpg" alt=""></a></li>
-          <li><a href="#"><img src="./LB1.jpg" alt=""></a></li>
-        </ul>
-        <ul class="index_carousel clearfix">
-          <li class="current"></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-    </div>
+    <index-experience></index-experience>
     <!--萌宠说组件-->
     <div class="index_experience_hall adorable_pet">
       <div class="experience_hall_top adorable_pet_top">
@@ -153,6 +132,7 @@
   import IndexHeader from 'page/index/index-header/index-header'
   import IndexCarousel from 'page/index/index-carousel/index-carousel'
   import IndexCategory from 'page/index/index-category/index-category'
+  import IndexExperience from 'page/index/index-experience/index-experience'
   export default {
     /*计算属性 取出来ajax获取的数据*/
     computed: {
@@ -167,7 +147,8 @@
     components: {
       IndexHeader,
       IndexCarousel,
-      IndexCategory
+      IndexCategory,
+      IndexExperience
     }
   }
 </script>
@@ -278,7 +259,7 @@
       position: relative;
       .index_carousel_images {
         /*4倍宽度  横向 四张图片*/
-        width: 600%;
+        width: 100%;
         /*-webkit-transform: translateX(-16.667%);
         transform: translateX(-16.667%);*/
         li {

@@ -13,11 +13,21 @@ module.exports = {
     proxyTable: {
       '/api': { // 对以/api开头的地址请求进行代理
         target: 'https://mallcdn.api.epet.com/', // 转发请求的基本地址
+        //https://mall.api.epet.com/v3/index/main.html
         changeOrigin: true,  // 支持跨域
         pathRewrite: {
           '^/api': '/'   // 将/api替换为/
         }
-      }
+      },
+      'apl': { // 对以/api开头的地址请求进行代理
+        //https://mall.api.epet.com/v3/index/main.html?do=GetDynamicV315&pet_type=dog&version=358&system=wap&isWeb=1&_=1513655559493
+        target: 'https://mall.api.epet.com/', // 转发请求的基本地址
+        //https://mall.api.epet.com/v3/index/main.html
+        changeOrigin: true,  // 支持跨域
+        pathRewrite: {
+          '^/apl': '/'   // 将/api替换为/
+        }
+      },
     },
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

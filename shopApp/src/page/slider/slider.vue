@@ -164,14 +164,14 @@
       font-size: 0;
       .dot {
         display: inline-block;
-        margin: 0 10/@rem;
-        width: 20/@rem;
-        height: 16/@rem;
+        margin: 0 13/@rem;
+        width: 15/@rem;
+        height: 15/@rem;
         border-radius: 50%;
         background: @color-text-l;
         &.active{
           width: 30/@rem;
-          border-radius: 15/@rem;
+          border-radius: 50/@rem;
           background: @color-text-ll;
         }
       }

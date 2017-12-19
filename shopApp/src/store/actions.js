@@ -1,4 +1,4 @@
-import {getGoods} from 'api/index'
+import {getGoods,getDynamic} from 'api/index'
 import {ERR_SUCCEED} from "api/config";
 import {SERVICE_INDEX,SERVICE_INDEXHEADER} from './types'
 // const ERR_SUCCEED ="succeed"
@@ -23,6 +23,17 @@ export default {
       }
     })
   },
+  reqDynamic({commit}, callback) {
+    getDynamic().then(response => {
+      //发起请求
+      const result = response.data
+      if (result.code === ERR_SUCCEED)  {
+        const buys = result.data
+        commit(SERVICE_DYNAMIC, {buys})
+        callback && callback()
+      }
+    })
+  }
   /*获取menus数据*/
   /*reqGoods({commit}, callback) {
     /!*发起ajax请求*!/

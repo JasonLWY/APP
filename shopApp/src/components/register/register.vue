@@ -14,8 +14,9 @@
         </div>
         <div class="form_d2">
           <label for="code"></label>
+          <!--调用我自己的Blog验证码-->
           <input type="text" id="code" name="code" placeholder="请输入要验证码">
-          <img src="./code.png" alt="">
+          <img ref="randImage" @click="loadimage" src="http://114.215.91.58/Blog/image.jsp" alt="">
         </div>
         <div class="form_d3">
           <label for="message"></label>
@@ -38,9 +39,18 @@
 
 <script>
     export default {
+      data() {
+        return{
+//          src: ''
+        }
+      },
       methods: {
         back() {
           this.$router.back()
+        },
+        loadimage() {
+          /*实现验证码点击重新加载*/
+          this.$refs.randImage.src = "http://114.215.91.58/Blog/image.jsp?" + Math.random();
         }
       }
     }
