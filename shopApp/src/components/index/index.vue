@@ -60,6 +60,7 @@
     <index-experience></index-experience>
     <!--萌宠说video组件-->
     <div class="index_experience_hall adorable_pet">
+      <i class="play"></i>
       <div class="experience_hall_top adorable_pet_top">
         <i class="img_left"></i>
         <i class="img_right"></i>
@@ -74,7 +75,8 @@
       </div>
     </div>
     <!--小剧场 video-->
-    <div class="index_experience_hall adorable_pet Theatre" v-for="">
+    <div class="index_experience_hall adorable_pet Theatre">
+      <i class="play"></i>
       <div class="experience_hall_top adorable_pet_top Theatre_top">
         <i class="img_left"></i>
         <i class="img_right"></i>
@@ -544,6 +546,19 @@
       /*height: 400/@rem;*/
       position: relative;
       background: #ffffff;
+      .play {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 350/@rem;
+        bottom: 0;
+        margin: 0 auto;
+        width: 60/@rem;
+        height: 60/@rem;
+        background-image: url("./play2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
       .adorable_pet_top {
         width: 100%;
         margin-top: 18/@rem;
@@ -582,6 +597,7 @@
     }
     .adorable_pet {
       height: 714/@rem;
+      position: relative;
       .adorable_pet_text {
         text-align: center;
         font-size: 20/@rem;
@@ -616,6 +632,19 @@
       /*height: 400/@rem;*/
       position: relative;
       background: #ffffff;
+      .play {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 350/@rem;
+        bottom: 0;
+        margin: 0 auto;
+        width: 60/@rem;
+        height: 60/@rem;
+        background-image: url("./play2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
       .Theatre_top {
         width: 100%;
         margin-top: 18/@rem;
