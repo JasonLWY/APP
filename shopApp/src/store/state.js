@@ -4,5 +4,6 @@ export default {
   goods: {},
   buys: {},
   category: {},
-  categorylist: {}
+  categorylist: {},
+  brandslist: {}
 }

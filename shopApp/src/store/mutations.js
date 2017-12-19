@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import {SERVICE_INDEX,SERVICE_INDEXHEADER,SERVICE_DYNAMIC,SERVICE_CATEGORY,SERVICE_CATEGORYLIST} from './types'
+import {SERVICE_INDEX,SERVICE_INDEXHEADER,SERVICE_DYNAMIC,SERVICE_CATEGORY,SERVICE_CATEGORYLIST,SERVICE_BRANDSLIST} from './types'
 
 export default {
   [SERVICE_INDEX] (state, {goods}){
@@ -16,5 +16,8 @@ export default {
   },
   [SERVICE_CATEGORYLIST] (state, {categorylist}){
     state.categorylist = categorylist
+  },
+  [SERVICE_BRANDSLIST] (state, {brandslist}){
+    state.brandslist = brandslist
   }
 }

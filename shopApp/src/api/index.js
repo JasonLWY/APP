@@ -50,5 +50,11 @@ export const getCategoryList = () => {
   // https://mallcdn.api.epet.com/v3/goods/category/main.html?pet_type=dog&system=wap&isWeb=1&version=303&_=1513692978078
   return axios.get(`${url}do=getChildren&owner=88888&pet_type=dog&system=wap&isWeb=1&version=303&_=1513694957236`)
 }
-
 //https://mallcdn.api.epet.com/v3/goods/category/main.html?do=getChildren&owner=88888&pet_type=dog&system=wap&isWeb=1&version=303&_=1513694957236
+
+//brands-list获取
+export const getBrands = () => {
+  const url = '/api/v3/brand/list/main.html?'
+  // https://mallcdn.api.epet.com/v3/brand/list/main.html?pet_type=dog&system=wap&isWeb=1&version=303&_=1513697366601
+  return axios.get(`${url}pet_type=dog&system=wap&isWeb=1&version=303&_=1513697366601`)
+}

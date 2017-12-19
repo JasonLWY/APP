@@ -22,6 +22,7 @@
       this.$store.dispatch('reqDynamic')
       this.$store.dispatch('reqCategory')
       this.$store.dispatch('reqCategoryList')
+      this.$store.dispatch('reqBrands')
     },
   }
 </script>

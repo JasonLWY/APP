@@ -1,6 +1,6 @@
-import {getGoods,getDynamic,getCategory,getCategoryList} from 'api/index'
+import {getGoods,getDynamic,getCategory,getCategoryList,getBrands} from 'api/index'
 import {ERR_SUCCEED} from "api/config";
-import {SERVICE_INDEX,SERVICE_INDEXHEADER,SERVICE_DYNAMIC,SERVICE_CATEGORY,SERVICE_CATEGORYLIST} from './types'
+import {SERVICE_INDEX,SERVICE_INDEXHEADER,SERVICE_DYNAMIC,SERVICE_CATEGORY,SERVICE_CATEGORYLIST,SERVICE_BRANDSLIST} from './types'
 // const ERR_SUCCEED ="succeed"
 export default {
   //获取datas 数据
@@ -58,7 +58,19 @@ export default {
         callback && callback()
       }
     })
-  }
+  },
+  reqBrands({commit}, callback) {
+    getBrands().then(response => {
+      //发起请求
+      const result = response.data
+      if (result.code === ERR_SUCCEED) {
+        const brandslist = result.brand
+        // console.log(arr)
+        commit(SERVICE_BRANDSLIST, {brandslist})
+        callback && callback()
+      }
+    })
+  },
   /*获取menus数据*/
   /*reqGoods({commit}, callback) {
     /!*发起ajax请求*!/
