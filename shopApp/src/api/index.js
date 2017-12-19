@@ -31,7 +31,7 @@ export const getGoods = () => {
     isWeb: 1,
     _: 1513390301942
   })*/
-  return  axios.get(`${url}pet_type=dog&version=358&is_single=0&system=wap&isWeb=1&_=1513652456405`)
+  return  axios.get(`${url}pet_type=dog&version=358&is_single=0&system=wap&isWeb=1&_=1513683910452`)
 }
 export const getDynamic = () => {
   const url = '/api/v3/index/main.html?'

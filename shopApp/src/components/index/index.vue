@@ -12,19 +12,19 @@
     <!--discount组件-->
     <div class="index_discount">
       <div class="discount_img">
-        <img :src="goods[6].content_images[0][0].image">
+        <img :src="goods[5].content_images[0][0].image">
       </div>
     </div>
     <!--recommend组件-->
     <div class="index_recommend clearfix">
       <div class="recommend_imgR f_l">
-        <img :src="goods[8].content_images[0][0].image" alt="">
+        <img :src="goods[7].content_images[0][0].image" alt="">
       </div>
       <div class="hr"></div>
       <div class="recommend_imgL f_r">
-        <div class="img1"><img :src="goods[8].content_images[1][0].image" alt=""></div>
+        <div class="img1"><img :src="goods[7].content_images[1][0].image" alt=""></div>
         <div class="hr"></div>
-        <div class="img2 clearfix"><img :src="goods[8].content_images[1][1].image" alt=""></div>
+        <div class="img2 clearfix"><img :src="goods[7].content_images[1][1].image" alt=""></div>
       </div>
     </div>
     <!--sale组件-->
@@ -33,53 +33,59 @@
         <i class="img_left"></i>
         <i class="img_right"></i>
       </div>
+      <!--{{goods[13].content_images[0][0].image}}-->
       <div class="sale_list">
-        <img src="./list1.jpg" alt="">
+        <img :src="goods[13].content_images[0][0].image" alt="">
       </div>
       <div class="sale_list">
-        <img src="./list2.jpg" alt="">
+        <img :src="goods[15].content_images[0][0].image" alt="">
       </div>
       <div class="sale_list">
-        <img src="./list3.jpg" alt="">
+        <img :src="goods[17].content_images[0][0].image" alt="">
       </div>
       <div class="sale_list">
-        <img src="./list4.jpg" alt="">
+        <img :src="goods[19].content_images[0][0].image" alt="">
       </div>
       <div class="sale_list">
-        <img src="./list5.jpg" alt="">
+        <img :src="goods[21].content_images[0][0].image" alt="">
       </div>
       <div class="sale_list">
-        <img src="./list6.jpg" alt="">
+        <img :src="goods[23].content_images[0][0].image" alt="">
       </div>
       <div class="sale_list">
-        <img src="./list7.jpg" alt="">
+        <img :src="goods[25].content_images[0][0].image" alt="">
       </div>
     </div>
     <!--体验馆组件-->
     <index-experience></index-experience>
-    <!--萌宠说组件-->
+    <!--萌宠说video组件-->
     <div class="index_experience_hall adorable_pet">
       <div class="experience_hall_top adorable_pet_top">
         <i class="img_left"></i>
         <i class="img_right"></i>
       </div>
-      <div class="sale_list adorable_pet_list">
-        <img src="./shiping.jpg" alt="">
+      <!--{{goods[32].value} [{}]}//需要遍历-->
+      <div class="sale_list adorable_pet_list" v-for="item in goods[32].value">
+        <img :src="item.cover.image" alt="">
       </div>
-      <div class="adorable_pet_text">第2期-猫啪啪啪的时候爽吗？</div>
-      <div class="adorable_pet_look"><i>观看数</i><i></i><i>2222</i></div>
+      <div v-for="item in goods[32].value">
+        <div class="adorable_pet_text">{{item.share_target.param.title}}</div>
+        <div class="adorable_pet_look"><i>观看数</i><i></i><i>{{item.visit}}</i></div>
+      </div>
     </div>
-    <!--小剧场-->
-    <div class="index_experience_hall adorable_pet Theatre">
+    <!--小剧场 video-->
+    <div class="index_experience_hall adorable_pet Theatre" v-for="">
       <div class="experience_hall_top adorable_pet_top Theatre_top">
         <i class="img_left"></i>
         <i class="img_right"></i>
       </div>
-      <div class="sale_list adorable_pet_list Theatre_list">
-        <img src="./T.jpg" alt="">
+      <div class="sale_list adorable_pet_list" v-for="item in goods[35].value">
+        <img :src="item.cover.image" alt="">
       </div>
-      <div class="adorable_pet_text">第2期-猫啪啪啪的时候爽吗？</div>
-      <div class="adorable_pet_look"><i>观看数</i><i></i><i>2222</i></div>
+      <div v-for="item in goods[35].value">
+        <div class="adorable_pet_text">{{item.share_target.param.title}}</div>
+        <div class="adorable_pet_look"><i>观看数</i><i></i><i>{{item.visit}}</i></div>
+      </div>
     </div>
     <!--留白-->
     <div class="while"></div>
@@ -120,7 +126,7 @@
   .index_container {
     width: 100%;
     background: #F3F4F6;
-    /*头部部分*/
+    /*head-part*/
     .index_head {
       width: 100%;
       height: 190/@rem;
@@ -149,11 +155,11 @@
         }
         .span2 {
           position: absolute;
-          top: 10/@rem;
-          left: 108/@rem;
-          height: 50/@rem;
-          width: 2px;
-          background: #908B8D;
+          top: 15/@rem;
+          left: 110/@rem;
+          height: 45/@rem;
+          width: 1px;
+          background: rgba(144, 139, 141, .4);;
         }
         .search_img {
           position: absolute;
@@ -258,7 +264,6 @@
       }
     }
     /*category部分*/
-
     .index_category {
       width: 100%;
       height: 366/@rem;
