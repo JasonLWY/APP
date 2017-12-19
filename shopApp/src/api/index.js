@@ -39,5 +39,16 @@ export const getDynamic = () => {
   // do=GetDynamicV315&pet_type=dog&version=358&system=wap&isWeb=1&_=1513655559493
   return axios.get(`${url}do=GetDynamicV315&pet_type=dog&version=358&system=wap&isWeb=1&_=1513655559493`)
 }
+export const getCategory = () => {
+  const url = '/api/v3/goods/category/main.html?'
+  // https://mallcdn.api.epet.com/v3/goods/category/main.html?pet_type=dog&system=wap&isWeb=1&version=303&_=1513692978078
+  return axios.get(`${url}pet_type=dog&system=wap&isWeb=1&version=303&_=1513692978078`)
+}
+//category-list
+export const getCategoryList = () => {
+  const url = '/api/v3/goods/category/main.html?'
+  // https://mallcdn.api.epet.com/v3/goods/category/main.html?pet_type=dog&system=wap&isWeb=1&version=303&_=1513692978078
+  return axios.get(`${url}do=getChildren&owner=88888&pet_type=dog&system=wap&isWeb=1&version=303&_=1513694957236`)
+}
 
-
+//https://mallcdn.api.epet.com/v3/goods/category/main.html?do=getChildren&owner=88888&pet_type=dog&system=wap&isWeb=1&version=303&_=1513694957236

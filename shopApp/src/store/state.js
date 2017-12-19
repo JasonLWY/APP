@@ -2,5 +2,7 @@
 export default {
   menus: [],
   goods: {},
-  buys: {}
+  buys: {},
+  category: {},
+  categorylist: {}
 }

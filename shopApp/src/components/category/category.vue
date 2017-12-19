@@ -8,56 +8,38 @@
       <router-link to="/search"><i class="head_right_img"></i></router-link>
     </div>
 
-    <div class="main">
+    <div class="main clearfix">
       <!--left-->
       <!--  左边的区域 -->
       <div class="main_left f_l">
-        <ul>
-          <li class='current'><a href="#">猫咪零食</a></li>
+        <ul class="">
+          <li v-for="(item, index) in category" :class="{current: index === indexb}" :key="index" @click="select(index)">
+            <a href="#">{{item.name}}</a>
+          </li>
+          <!--<li class='current'><a href="#">猫咪零食</a></li>
           <li><a href="#">猫咪零食</a></li>
           <li><a href="#">猫咪零食</a></li>
           <li><a href="#">猫咪零食</a></li>
           <li><a href="#">猫咪零食</a></li>
           <li><a href="#">猫咪零食</a></li>
-          <li><a href="#">猫咪零食</a></li>
-          <li><a href="#">猫咪零食</a></li>
+          <li><a href="#">猫咪零食</a></li>-->
         </ul>
       </div>
       <!--右边的区域 -->
       <div class="main_right">
-        <span>热门分类</span>
+        <div>
+            <span>{{categorylist[0].title}}</span>
+        </div>
+
         <!-- 列表内容 -->
         <!-- ul.clearfix>li*15>a[href='#']>img[src='images/nv-fy.jpg']+p{毛呢大衣} -->
+
         <ul>
-          <li><router-link to="/shop_list">
-            <img src="./cate1.jpg">
-          </router-link>
-            <p>磨牙洁齿</p>
-          </li>
-          <li><a href="#">
-            <img src="./cate2.jpg">
-          </a>
-            <p>磨牙洁齿</p>
-          </li>
-          <li><a href="#">
-            <img src="./cate3.jpg">
-          </a>
-            <p>磨牙洁齿</p>
-          </li>
-          <li><a href="#">
-            <img src="./cate4.jpg" alt="">
-          </a>
-            <p>磨牙洁齿</p>
-          </li>
-          <li><a href="#">
-            <img src="./cate5.jpg" alt="">
-          </a>
-            <p>磨牙洁齿</p>
-          </li>
-          <li><a href="#">
-            <img src="./cate6.jpg" alt="">
-          </a>
-            <p>磨牙洁齿</p>
+          <li v-for="item in categorylist[0].list">
+            <router-link to="/shop_list">
+              <img :src="item.photo">
+            </router-link>
+            <p>{{item.name}}</p>
           </li>
         </ul>
       </div>
@@ -65,10 +47,29 @@
   </div>
 </template>
 <script>
+  import {mapState} from 'vuex'
   export default {
+    data() {
+      return{
+        indexb: 0
+      }
+    },
+    computed: {
+      ...mapState(['category','categorylist'])
+    },
+    mounted() {
+      this._select()
+    },
+    methods:{
+      _select() {
+
+      }
+    }
+
   }
 </script>
-<style scoped lang="less">
+<style lang="less">
+  @import "~common/css/public";
   @rem: 750/16rem;
   .category_container {
     width: 100%;
@@ -89,11 +90,6 @@
           font-weight: 600;
           color: black;
         }
-        /*.span1 a{
-          color: red;
-          padding-bottom: 25/@rem;
-          border-bottom: 2px solid red;
-        }*/
         .current a {
           color: red;
           padding-bottom: 25/@rem;
@@ -115,7 +111,7 @@
     .main {
       width: 100%;
       background: #F3F5F8;
-      height: 1116/@rem;
+      height: auto;
       margin-top: 10/@rem;
       .main_left {
         width: 185/@rem;
@@ -155,17 +151,17 @@
           color: #99999B;
           margin: 57/@rem 0 0 26/@rem;
         }
-        ul{
-          li{
+        ul {
+          li {
             float: left;
             margin-left: 20/@rem;
             margin-top: 10/@rem;
             text-align: center;
-            img{
+            img {
               width: 162/@rem;
               height: auto;
             }
-            p{
+            p {
               font-size: 27/@rem;
             }
           }

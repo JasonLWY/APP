@@ -20,6 +20,8 @@
       // 发送ajax请求获取seller并更新状态
       this.$store.dispatch('reqGoods')
       this.$store.dispatch('reqDynamic')
+      this.$store.dispatch('reqCategory')
+      this.$store.dispatch('reqCategoryList')
     },
   }
 </script>
