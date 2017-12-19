@@ -1,31 +1,35 @@
 <template>
-  <div class="index_carousel">
-    <ul class="index_carousel_images clearfix">
-      <li v-for="item in goods[0].value">
-        <a href="#"><img :src="item.image" alt=""></a>
-      </li>
- <!-- <li><a href="#"><img src="./LB1.jpg" alt=""></a></li>
-      <li><a href="#"><img src="./LB2.png" alt=""></a></li>
-      <li><a href="#"><img src="./LB3.jpg" alt=""></a></li>
-      <li><a href="#"><img src="./LB4.jpg" alt=""></a></li>
-      <li><a href="#"><img src="./LB1.jpg" alt=""></a></li>-->
-    </ul>
-    <ul class="index_carousel clearfix">
-      <li class="current"></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </div>
+    <div class="index_carousel">
+      <ul class="index_carousel_images clearfix">
+        <slider>
+        <li v-for="item in goods[0].value">
+          <a href="#">
+            <img :src="item.image" alt="">
+          </a>
+        </li>
+          </slider>
+      </ul>
+      <!--<ul class="index_carousel clearfix">
+        <li class="current"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>-->
+    </div>
 </template>
-
 <script>
+  import Slider from 'page/slider/slider'
   import {mapState} from 'vuex'
-    export default {
-      computed: {
-        ...mapState(['goods'])
-      }
+
+  export default {
+    computed: {
+      ...mapState(['goods'])
+    },
+    components: {
+      /*无缝滑屏封装*/
+      Slider
     }
+  }
 </script>
 <style scoped lang="less">
   @rem: 750/16rem;
@@ -37,18 +41,19 @@
     position: relative;
     .index_carousel_images {
       /*4倍宽度  横向 四张图片*/
-      width: 600%;
-      -webkit-transform: translateX(-16.667%);
-      transform: translateX(-16.667%);
+      width: 100%;
+   /*   -webkit-transform: translateX(-16.667%);
+      transform: translateX(-16.667%);*/
       li {
         float: left;
-        width: 16.6667%;
+       width: 100%;
         a {
           display: block;
           width: 100%;
           img {
             display: block;
             width: 100%;
+            height: auto;
           }
         }
       }

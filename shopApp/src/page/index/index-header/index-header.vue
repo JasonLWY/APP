@@ -9,36 +9,40 @@
       <i class="search_img"></i>
       <a href="#"> <i class="chat_img"></i></a>
     </div>
-      <div class="head_bottom clearfix">
-        <ul id="#wrapper" class="bottom_ul">
-          <li v-for="(item, index) in menus">
-            <a href="#">{{item.menu_name}}</a>
-          </li>
-          <!--<li><a class="current"  href="#">零食玩具</a></li>-->
-          <!--<li><a href="#">零食玩具</a></li>-->
-          <!--<li><a href="#">零食玩具</a></li>-->
-          <!--<li><a href="#">零食</a></li>-->
-          <!--<li><a href="#">零食玩具</a></li>-->
-          <!--<li><a href="#">零食玩具</a></li>-->
-        </ul>
-      </div>
+    <div class="head_bottom clearfix" ref="muns_slider">
+      <ul id="#wrapper" class="bottom_ul">
+        <li v-for="(item, index) in menus">
+          <a href="#">{{item.menu_name}}</a>
+        </li>
+      </ul>
+    </div>
     <div class="hr"></div>
   </div>
 </template>
 
 <script>
   import {mapState} from 'vuex'
+  import BScroll from 'better-scroll'
+
   export default {
+    mounted() {
+     this._initScroll()
+    },
     methods: {
       /*跳转到search路由组件*/
       search() {
         this.$router.push('/search');
+      },
+      _initScroll() {
+        this.menusDcroll = new BScroll(this.$refs.muns_slider, {
+          click: true,
+          scrollX: true,
+        })
       }
     },
     computed: {
       ...mapState(['menus'])
     }
-
   }
 </script>
 <style lang="less">

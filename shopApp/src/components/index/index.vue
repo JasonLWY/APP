@@ -158,10 +158,6 @@
     computed: {
       ...mapState(['goods'])
     },
-    mounted () {
-      // 发送ajax请求获取seller并更新状态
-      this.$store.dispatch('reqGoods')
-    },
     methods: {
       /*跳转到search路由组件*/
       search() {
@@ -283,8 +279,8 @@
       .index_carousel_images {
         /*4倍宽度  横向 四张图片*/
         width: 600%;
-        -webkit-transform: translateX(-16.667%);
-        transform: translateX(-16.667%);
+        /*-webkit-transform: translateX(-16.667%);
+        transform: translateX(-16.667%);*/
         li {
           float: left;
           width: 16.6667%;
