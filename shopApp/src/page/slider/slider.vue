@@ -68,7 +68,7 @@
       _setSliderWidth(isReset) {
         this.children = this.$refs.sliderGroup.children
 
-        console.log(this.$refs.sliderGroup.children.length)
+//        console.log(this.$refs.sliderGroup.children.length)
 
         let width = 0
         let sliderWidth = this.$refs.slider.clientWidth
@@ -88,7 +88,7 @@
       },
       _initDots() {
         this.dots = new Array(this.children.length)
-        console.log(this.dots)
+//        console.log(this.dots)
       },
       _initSlider() {
         this.slider = new BScroll(this.$refs.slider, {

@@ -34,7 +34,7 @@ export const getGoods = () => {
   return  axios.get(`${url}pet_type=dog&version=358&is_single=0&system=wap&isWeb=1&_=1513652456405`)
 }
 export const getDynamic = () => {
-  const url = '/apl.epet.com/v3/index/main.html?'
+  const url = '/api/v3/index/main.html?'
  // https://mall.api.epet.com/v3/index/main.html?
   // do=GetDynamicV315&pet_type=dog&version=358&system=wap&isWeb=1&_=1513655559493
   return axios.get(`${url}do=GetDynamicV315&pet_type=dog&version=358&system=wap&isWeb=1&_=1513655559493`)

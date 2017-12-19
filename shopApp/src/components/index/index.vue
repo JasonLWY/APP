@@ -2,71 +2,29 @@
   <div class="index_container">
     <!--头部组件-->
     <index-header></index-header>
-   <!-- {{goods}}-->
+    <!-- {{goods}}-->
     <!--轮播组件-->
     <index-carousel></index-carousel>
     <!--分类组件-->
     <index-category></index-category>
     <!--抢购组件-->
-    <div class="index_P_buying">
-      <div class="P_buying_top">
-        <i class="img_left"></i>
-        <span class="Seckill">
-                        距离本场结束
-                        <ul class='f_l clearfix'>
-						<li>0</li>
-						<li>0</li>
-						<li>:</li>
-						<li>0</li>
-						<li>0</li>
-						<li>:</li>
-						<li>0</li>
-						<li>0</li>
-					</ul>
-                    </span>
-        <i class="img_right"></i>
-      </div>
-      <div class="P_buying_list">
-        <ul class="list_ul clearfix">
-          <li>
-            <a href="#"><img src="./buy1.jpg"></a>
-            <span>￥1.22</span><br>
-            <span>省￥11.22</span>
-          </li>
-          <li>
-            <a href="#"><img src="./buy1.jpg"></a>
-            <span>￥1.22</span><br>
-            <span>省￥11.22</span>
-          </li>
-          <li>
-            <a href="#"><img src="./buy1.jpg"></a>
-            <span>￥1.22</span><br>
-            <span>省￥11.22</span>
-          </li>
-          <li>
-            <a href="#"><img src="./buy1.jpg"></a>
-            <span>￥1.22</span><br>
-            <span>省￥11.22</span>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <index-buys></index-buys>
     <!--discount组件-->
     <div class="index_discount">
       <div class="discount_img">
-        <img src="./discount.jpg">
+        <img :src="goods[6].content_images[0][0].image">
       </div>
     </div>
     <!--recommend组件-->
     <div class="index_recommend clearfix">
       <div class="recommend_imgR f_l">
-        <img src="./img_R.jpg" alt="">
+        <img :src="goods[8].content_images[0][0].image" alt="">
       </div>
       <div class="hr"></div>
       <div class="recommend_imgL f_r">
-        <div class="img1"><img src="./img_l1.jpg" alt=""></div>
+        <div class="img1"><img :src="goods[8].content_images[1][0].image" alt=""></div>
         <div class="hr"></div>
-        <div class="img2 clearfix"><img src="./img_l2.jpg" alt=""></div>
+        <div class="img2 clearfix"><img :src="goods[8].content_images[1][1].image" alt=""></div>
       </div>
     </div>
     <!--sale组件-->
@@ -133,6 +91,8 @@
   import IndexCarousel from 'page/index/index-carousel/index-carousel'
   import IndexCategory from 'page/index/index-category/index-category'
   import IndexExperience from 'page/index/index-experience/index-experience'
+  import IndexBuys from 'page/index/index-buys/index-buys'
+
   export default {
     /*计算属性 取出来ajax获取的数据*/
     computed: {
@@ -148,12 +108,14 @@
       IndexHeader,
       IndexCarousel,
       IndexCategory,
-      IndexExperience
+      IndexExperience,
+      IndexBuys
     }
   }
 </script>
 <style lang="less">
   @import "~common/css/public";
+
   @rem: 750/16rem;
   .index_container {
     width: 100%;

@@ -1,6 +1,6 @@
 import {getGoods,getDynamic} from 'api/index'
 import {ERR_SUCCEED} from "api/config";
-import {SERVICE_INDEX,SERVICE_INDEXHEADER} from './types'
+import {SERVICE_INDEX,SERVICE_INDEXHEADER,SERVICE_DYNAMIC} from './types'
 // const ERR_SUCCEED ="succeed"
 export default {
   //获取datas 数据
@@ -27,8 +27,9 @@ export default {
     getDynamic().then(response => {
       //发起请求
       const result = response.data
-      if (result.code === ERR_SUCCEED)  {
+      if (result.code === ERR_SUCCEED) {
         const buys = result.data
+        // console.log(arr)
         commit(SERVICE_DYNAMIC, {buys})
         callback && callback()
       }
