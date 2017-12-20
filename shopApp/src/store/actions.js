@@ -1,6 +1,13 @@
-import {getGoods,getDynamic,getCategory,getCategoryList,getBrands} from 'api/index'
+import {getGoods, getDynamic, getCategory, getCategoryList, getBrands} from 'api/index'
 import {ERR_SUCCEED} from "api/config";
-import {SERVICE_INDEX,SERVICE_INDEXHEADER,SERVICE_DYNAMIC,SERVICE_CATEGORY,SERVICE_CATEGORYLIST,SERVICE_BRANDSLIST} from './types'
+import {
+  SERVICE_INDEX,
+  SERVICE_INDEXHEADER,
+  SERVICE_DYNAMIC,
+  SERVICE_CATEGORY,
+  SERVICE_CATEGORYLIST,
+  SERVICE_BRANDSLIST
+} from './types'
 // const ERR_SUCCEED ="succeed"
 export default {
   //获取datas 数据

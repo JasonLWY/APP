@@ -1,39 +1,34 @@
 <template>
   <div class="index_container">
-    <!--头部组件-->
+    <!--{{goods}}-->
     <index-header></index-header>
-    <!-- {{goods}}-->
-    <!--轮播组件-->
     <index-carousel></index-carousel>
-    <!--分类组件-->
     <index-category></index-category>
-    <!--抢购组件-->
     <index-buys></index-buys>
-    <!--discount组件-->
     <div class="index_discount">
-      <div class="discount_img">
-        <img :src="goods[5].content_images[0][0].image">
+      <div class="discount_img" v-if="goods[6]">
+        <img :src="goods[6].content_images[0][0].image">
       </div>
     </div>
     <!--recommend组件-->
     <div class="index_recommend clearfix">
       <div class="recommend_imgR f_l">
-        <img :src="goods[7].content_images[0][0].image" alt="">
+        <img :src="goods[8].content_images[0][0].image" alt="">
       </div>
       <div class="hr"></div>
       <div class="recommend_imgL f_r">
-        <div class="img1"><img :src="goods[7].content_images[1][0].image" alt=""></div>
+        <div class="img1"><img :src="goods[8].content_images[1][0].image" alt=""></div>
         <div class="hr"></div>
-        <div class="img2 clearfix"><img :src="goods[7].content_images[1][1].image" alt=""></div>
+        <div class="img2 clearfix"><img :src="goods[8].content_images[1][1].image" alt=""></div>
       </div>
     </div>
     <!--sale组件-->
-    <div class="index_sale">
+    <!--<div class="index_sale">
       <div class="sale_top">
         <i class="img_left"></i>
         <i class="img_right"></i>
       </div>
-      <!--{{goods[13].content_images[0][0].image}}-->
+      &lt;!&ndash;{{goods[13].content_images[0][0].image}}&ndash;&gt;
       <div class="sale_list">
         <img :src="goods[13].content_images[0][0].image" alt="">
       </div>
@@ -55,10 +50,9 @@
       <div class="sale_list">
         <img :src="goods[25].content_images[0][0].image" alt="">
       </div>
-    </div>
+    </div>-->
     <!--体验馆组件-->
     <index-experience></index-experience>
-    <!--萌宠说video组件-->
     <div class="index_experience_hall adorable_pet">
       <i class="play"></i>
       <div class="experience_hall_top adorable_pet_top">
@@ -66,10 +60,10 @@
         <i class="img_right"></i>
       </div>
       <!--{{goods[32].value} [{}]}//需要遍历-->
-      <div class="sale_list adorable_pet_list" v-for="item in goods[32].value">
+      <div class="sale_list adorable_pet_list" v-for="item in goods[37].value">
         <img :src="item.cover.image" alt="">
       </div>
-      <div v-for="item in goods[32].value">
+      <div v-for="item in goods[37].value">
         <div class="adorable_pet_text">{{item.share_target.param.title}}</div>
         <div class="adorable_pet_look"><i>观看数</i><i></i><i>{{item.visit}}</i></div>
       </div>
@@ -81,10 +75,10 @@
         <i class="img_left"></i>
         <i class="img_right"></i>
       </div>
-      <div class="sale_list adorable_pet_list" v-for="item in goods[35].value">
+      <div class="sale_list adorable_pet_list" v-for="item in goods[40].value">
         <img :src="item.cover.image" alt="">
       </div>
-      <div v-for="item in goods[35].value">
+      <div v-for="item in goods[40].value">
         <div class="adorable_pet_text">{{item.share_target.param.title}}</div>
         <div class="adorable_pet_look"><i>观看数</i><i></i><i>{{item.visit}}</i></div>
       </div>
@@ -103,6 +97,9 @@
 
   export default {
     /*计算属性 取出来ajax获取的数据*/
+    mounted() {
+      this.$store.dispatch('reqGoods')
+    },
     computed: {
       ...mapState(['goods'])
     },
@@ -286,7 +283,6 @@
           }
         }
       }
-
     }
     /*秒杀组件*/
     .index_P_buying {

@@ -23,19 +23,12 @@ import axios from 'axios'
 /*获取主页的商品信息*/
 export const getGoods = () => {
   const url= '/api/v3/index/main.html?'
-  /*const data = Object.assign({},{
-    pet_type: 'dog',
-    version: 358,
-    is_single: 0,
-    system: 'wap',
-    isWeb: 1,
-    _: 1513390301942
-  })*/
-  return  axios.get(`${url}pet_type=dog&version=358&is_single=0&system=wap&isWeb=1&_=1513683910452`)
+  //https://mallcdn.api.epet.com/v3/index/main.html?
+  return  axios.get(`${url}pet_type=dog&version=358&is_single=0&system=wap&isWeb=1&_=1513781616541`)
 }
 export const getDynamic = () => {
   const url = '/api/v3/index/main.html?'
- // https://mall.api.epet.com/v3/index/main.html?
+  // https://mall.api.epet.com/v3/index/main.html?
   // do=GetDynamicV315&pet_type=dog&version=358&system=wap&isWeb=1&_=1513655559493
   return axios.get(`${url}do=GetDynamicV315&pet_type=dog&version=358&system=wap&isWeb=1&_=1513655559493`)
 }

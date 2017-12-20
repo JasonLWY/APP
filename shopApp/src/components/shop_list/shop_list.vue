@@ -35,7 +35,9 @@
           <router-link to="/detail"><img src="./list_shop1.jpg"></router-link>
         </div>
         <div class="shop_right f_l">
-          <div class="title"><router-link to="/detail">美国品牌麦德氏 IN-Basic高单位活化益生菌5g*5袋</router-link></div>
+          <div class="title">
+            <router-link to="/detail">美国品牌麦德氏 IN-Basic高单位活化益生菌5g*5袋</router-link>
+          </div>
           <div class="num">￥66.6</div>
           <div class="img_gongyi"><i></i></div>
           <div class="last"><i>互动:(99%好评)</i> <em>售出:13.1w</em></div>
@@ -115,7 +117,9 @@
           <a href="detail.html"><img src="./list_shop1.jpg"></a>
         </div>
         <div class="shop_right f_l">
-          <div class="title"><router-link to="/detail">美国品牌麦德氏 IN-Basic高单位活化益生菌5g*5袋</router-link></div>
+          <div class="title">
+            <router-link to="/detail">美国品牌麦德氏 IN-Basic高单位活化益生菌5g*5袋</router-link>
+          </div>
           <div class="num">￥66.6</div>
           <div class="img_gongyi"><i></i></div>
           <div class="last"><i>互动:(99%好评)</i> <em>售出:13.1w</em></div>
@@ -147,7 +151,9 @@
           <router-link to="detail"><img src="./list_shop1.jpg"></router-link>
         </div>
         <div class="shop_right f_l">
-          <div class="title"><router-link to="/detail">美国品牌麦德氏 IN-Basic高单位活化益生菌5g*5袋</router-link></div>
+          <div class="title">
+            <router-link to="/detail">美国品牌麦德氏 IN-Basic高单位活化益生菌5g*5袋</router-link>
+          </div>
           <div class="num">￥66.6</div>
           <div class="img_gongyi"><i></i></div>
           <div class="last"><i>互动:(99%好评)</i> <em>售出:13.1w</em></div>
@@ -213,34 +219,34 @@
 </template>
 
 <script>
-    export default {
-      methods: {
-        /*路由回返*/
-        back() {
-          this.$router.back()
-        },
-        /*点击跳转到search路由组件*/
-        search(){
-          this.$router.push('/search')
-        }
+  export default {
+    methods: {
+      /*路由回返*/
+      back() {
+        this.$router.back()
+      },
+      /*点击跳转到search路由组件*/
+      search() {
+        this.$router.push('/search')
       }
     }
+  }
 </script>
 <style lang="less">
-  @rem:750/16rem;
-  .shop_container{
+  @rem: 750/16rem;
+  .shop_container {
     width: 100%;
     background: #FFFFFF;
-    .shop_header{
+    .shop_header {
       background: #FFFFFF;
       text-align: center;
-      line-height:100/@rem;
+      line-height: 100/@rem;
       position: relative;
       width: 100%;
       height: 100/@rem;
-      .head_right_img{
+      .head_right_img {
         position: absolute;
-        top:27/@rem;
+        top: 27/@rem;
         right: 37/@rem;
         width: 37/@rem;
         height: 37/@rem;
@@ -248,7 +254,7 @@
         background-repeat: no-repeat;
         background-size: cover;
       }
-      .back_img{
+      .back_img {
         display: inline-block;
         position: absolute;
         top: 30/@rem;
@@ -260,24 +266,24 @@
         background-repeat: no-repeat;
         background-size: 50/@rem 50/@rem;
       }
-      .header_hr{
+      .header_hr {
         position: absolute;
         bottom: 0;
         height: 1px;
         width: 100%;
         background: #E8E8E8;
       }
-      span{
+      span {
         color: #000;
         font-size: 28/@rem;
         font-weight: 600;
       }
     }
-    .shop_search{
+    .shop_search {
       width: 100%;
       height: 122/@rem;
       position: relative;
-      .img_left{
+      .img_left {
         position: absolute;
         top: 35/@rem;
         left: 45/@rem;
@@ -287,44 +293,44 @@
         background-repeat: no-repeat;
         background-size: cover;
       }
-      .search{
+      .search {
         width: 711/@rem;
         height: 80/@rem;
         line-height: 100/@rem;
-        input{
+        input {
           display: inline-block;
           width: 100%;
           height: 100%;
-          background:#F6F6F6;
+          background: #F6F6F6;
           border-radius: 20/@rem;
           margin-left: 20/@rem;
           padding-left: 80/@rem;
         }
       }
     }
-    .shop_tap{
+    .shop_tap {
       width: 100%;
       height: 82/@rem;
       position: relative;
-      .hr{
+      .hr {
         height: 1px;
         width: 100%;
         position: absolute;
-        background: rgba(158, 158, 158,.3);
+        background: rgba(158, 158, 158, .3);
         bottom: 0;
       }
-      .tap_list{
+      .tap_list {
         width: 100%;
         display: flex;
         text-align: center;
-        span{
+        span {
           flex: 1;
           font-size: 30/@rem;
         }
-        .acquiescence{
+        .acquiescence {
           position: relative;
           color: red;
-          i{
+          i {
             position: absolute;
             top: 15/@rem;
             left: 130/@rem;
@@ -335,9 +341,9 @@
             background-size: cover;
           }
         }
-        .price{
+        .price {
           position: relative;
-          .i_1{
+          .i_1 {
             position: absolute;
             top: 5/@rem;
             left: 130/@rem;
@@ -347,7 +353,7 @@
             background-repeat: no-repeat;
             background-size: cover;
           }
-          .i_2{
+          .i_2 {
             position: absolute;
             top: 25/@rem;
             left: 133/@rem;
@@ -360,84 +366,84 @@
         }
       }
     }
-    .shop_list{
+    .shop_list {
       width: 100%;
       margin-top: 25/@rem;
       position: relative;
-      .cart{
+      .cart {
         position: absolute;
         bottom: 60/@rem;
         right: 30/@rem;
         width: 60/@rem;
         height: 60/@rem;
-        img{
+        img {
           display: inline-block;
           width: 100%;
           height: auto;
         }
       }
-      .list{
+      .list {
         width: 100%;
         height: 247/@rem;
         position: relative;
-        .hr{
+        .hr {
           height: 1px;
           width: 100%;
           position: absolute;
-          background: rgba(158, 158, 158,.3);
+          background: rgba(158, 158, 158, .3);
           bottom: 0;
         }
-        .shop_img{
+        .shop_img {
           width: 200/@rem;
           height: 200/@rem;
           margin-left: 24/@rem;
-          img{
+          img {
             display: inline-block;
             width: 100%;
             height: auto;
           }
         }
-        .shop_right{
+        .shop_right {
           width: 520/@rem;
-          div{
+          div {
             font-size: 26/@rem;
             font-weight: 500;
             margin-left: 30/@rem;
             margin-top: 10/@rem;
           }
-          .num{
+          .num {
             color: red;
             font-weight: 500;
           }
-          .title{
+          .title {
             line-height: 40/@rem;
-            a{
+            a {
               color: black;
             }
           }
-          .last{
-            i{
+          .last {
+            i {
               font-style: normal;
               font-size: 24/@rem;
-              color:#9E9E9E ;
+              color: #9E9E9E;
             }
-            em{
+            em {
               font-style: normal;
               font-size: 24/@rem;
-              color:#9E9E9E ;
+              color: #9E9E9E;
               margin-left: 15/@rem;
             }
           }
         }
       }
     }
-    .load_more{
+    .load_more {
       width: 100%;
       height: 133/@rem;
       background: #F5F5F5;
       text-align: center;
       line-height: 125/@rem;
-      span{
+      span {
         font-size: 28/@rem;
       }
     }

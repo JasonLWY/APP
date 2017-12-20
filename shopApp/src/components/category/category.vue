@@ -12,28 +12,21 @@
       <!--left-->
       <!--  左边的区域 -->
       <div class="main_left f_l">
-        <ul class="">
-          <li v-for="(item, index) in category" :class="{current: index === indexb}" :key="index" @click="select(index)">
-            <a href="#">{{item.name}}</a>
-          </li>
-          <!--<li class='current'><a href="#">猫咪零食</a></li>
-          <li><a href="#">猫咪零食</a></li>
-          <li><a href="#">猫咪零食</a></li>
-          <li><a href="#">猫咪零食</a></li>
-          <li><a href="#">猫咪零食</a></li>
-          <li><a href="#">猫咪零食</a></li>
-          <li><a href="#">猫咪零食</a></li>-->
-        </ul>
+        <div>
+          <ul>
+            <li v-for="(item, index) in category" :class="{current: index === indexb}" :key="index"
+                @click="select(index)">
+              <a href="#">{{item.name}}</a>
+            </li>
+          </ul>
+        </div>
       </div>
       <!--右边的区域 -->
       <div class="main_right">
         <div>
-            <span>{{categorylist[0].title}}</span>
+          <span>{{categorylist[0].title}}</span>
         </div>
-
         <!-- 列表内容 -->
-        <!-- ul.clearfix>li*15>a[href='#']>img[src='images/nv-fy.jpg']+p{毛呢大衣} -->
-
         <ul>
           <li v-for="item in categorylist[0].list">
             <router-link to="/shop_list">
@@ -48,19 +41,20 @@
 </template>
 <script>
   import {mapState} from 'vuex'
+
   export default {
     data() {
-      return{
-        indexb: 0
+      return {
+        indexb: 0,
       }
     },
     computed: {
-      ...mapState(['category','categorylist'])
+      ...mapState(['category', 'categorylist'])
     },
     mounted() {
       this._select()
     },
-    methods:{
+    methods: {
       _select() {
 
       }
@@ -70,6 +64,7 @@
 </script>
 <style lang="less">
   @import "~common/css/public";
+
   @rem: 750/16rem;
   .category_container {
     width: 100%;

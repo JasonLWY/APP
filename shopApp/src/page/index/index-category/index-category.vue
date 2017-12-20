@@ -2,7 +2,7 @@
   <div class="index_category">
     <div class="category_1">
       <ul class="clearfix">
-        <li v-for="item in goods[2].menus">
+        <li v-for="item in goods[1].menus">
           <a href="#"><img :src="item.image" alt=""></a>
         </li>
       </ul>

@@ -18,7 +18,7 @@
       <i class="img_right"></i>
     </div>
     <div class="P_buying_list">
-      <div ref="buys_Sliider">
+      <div class="slider" ref="buys_Sliider" v-if="buys">
         <ul class="list_ul clearfix" v-for="(item, index) in buys">
           <li v-for="i in item.goods">
             <a href="#">
@@ -32,7 +32,6 @@
     </div>
   </div>
 </template>
-
 <script>
   import {mapState} from 'vuex'
   import BScroll from 'better-scroll'
@@ -88,11 +87,6 @@
         position: relative;
         font-size: 28/@rem;
         margin-left: -100/@rem;
-        /*i{
-          font-style: normal;
-          border: 1px solid #A7A7A5;
-          padding: 5/@rem 5/@rem 5/@rem 5/@rem;
-        }*/
         ul {
           width: 149/@rem;
           position: absolute;
@@ -124,45 +118,48 @@
       width: 100%;
       overflow: hidden;
       margin-top: 50/@rem;
-      .list_ul {
-        width: 125%;
-        height: 245/@rem;
-        display: flex;
-        text-align: center;
-        padding-right: 40/@rem;
-        li {
-          flex: 1;
-          float: left;
-          position: relative;
-          a {
-            display: inline-block;
-            width: 160/@rem;
-            height: 160/@rem;
-            display: inline-block;
-            font-size: 28/@rem;
-            font-weight: 600;
-            color: #706D73;
-            img {
+      .slider {
+        width: 100%;
+        .list_ul {
+          width: 125%;
+          height: 245/@rem;
+          display: flex;
+          text-align: center;
+          padding-right: 40/@rem;
+          li {
+            flex: 1;
+            float: left;
+            position: relative;
+            a {
               display: inline-block;
-              width: 100%;
+              width: 160/@rem;
+              height: 160/@rem;
+              display: inline-block;
+              font-size: 28/@rem;
+              font-weight: 600;
+              color: #706D73;
+              img {
+                display: inline-block;
+                width: 100%;
+              }
             }
-          }
-          span:nth-of-type(1) {
-            font-style: normal;
-            color: red;
-            font-size: 28/@rem;
-            font-weight: 600;
-            position: absolute;
-            bottom: 40/@rem;
-            left: 50/@rem;
-          }
-          span:nth-of-type(2) {
-            color: #A7A7A5;
-            font-style: normal;
-            font-size: 14/@rem;
-            position: absolute;
-            bottom: 0/@rem;
-            left: 50/@rem;
+            span:nth-of-type(1) {
+              font-style: normal;
+              color: red;
+              font-size: 28/@rem;
+              font-weight: 600;
+              position: absolute;
+              bottom: 40/@rem;
+              left: 50/@rem;
+            }
+            span:nth-of-type(2) {
+              color: #A7A7A5;
+              font-style: normal;
+              font-size: 14/@rem;
+              position: absolute;
+              bottom: 0/@rem;
+              left: 50/@rem;
+            }
           }
         }
       }

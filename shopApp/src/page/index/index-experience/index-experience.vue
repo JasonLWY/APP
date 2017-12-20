@@ -7,7 +7,7 @@
     <div class="index_carousel experience_hall">
       <ul class="index_carousel_images clearfix">
         <slider>
-          <li v-for="item in goods[29].value">
+          <li v-for="item in goods[34].value">
             <a href="#">
               <img :src="item.image" alt="">
             </a>

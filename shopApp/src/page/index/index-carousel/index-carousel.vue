@@ -9,12 +9,6 @@
         </li>
           </slider>
       </ul>
-      <!--<ul class="index_carousel clearfix">
-        <li class="current"></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>-->
     </div>
 </template>
 <script>

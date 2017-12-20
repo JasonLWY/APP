@@ -327,7 +327,7 @@
   export default {
     methods: {
       back() {
-        this.$router/s
+        this.$router / s
       }
     }
   }

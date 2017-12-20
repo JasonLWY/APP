@@ -95,38 +95,37 @@
   </div>
 </template>
 <script>
-  export default {
-
-  }
+  export default {}
 </script>
 <style lang="less">
   @import "~common/css/public";
-  @rem:750/16rem;
+
+  @rem: 750/16rem;
   .own_container {
     width: 100%;
     position: relative;
     background: #F3F4F5;
-    .own_pagelist{
+    .own_pagelist {
       width: 100%;
       height: 177/@rem;
       margin-top: 20/@rem;
       background: #FFFFFF;
-      ul{
+      ul {
         width: 100%;
         display: flex;
         text-align: center;
-        li{
+        li {
           margin-top: 30/@rem;
           float: left;
           flex: 1;
-          a{
+          a {
             display: inline-block;
-            img{
+            img {
               display: inline-block;
               width: 55/@rem;
               height: 50/@rem;
             }
-            span{
+            span {
               color: #000;
               font-weight: 600;
               font-size: 28/@rem;
@@ -135,26 +134,26 @@
         }
       }
     }
-    .own_head{
+    .own_head {
       width: 100%;
-      height:333/@rem;
+      height: 333/@rem;
       position: relative;
       background-image: url("./bg.jpg");
       background-repeat: no-repeat;
       background-size: cover;
-      .head_img_1{
+      .head_img_1 {
         position: absolute;
-        top:63/@rem;
+        top: 63/@rem;
         right: 123/@rem;
         width: 44/@rem;
-        height:44/@rem;
+        height: 44/@rem;
         background-image: url("./setting.png");
         background-repeat: no-repeat;
         background-size: cover;
       }
-      .head_img_2{
+      .head_img_2 {
         position: absolute;
-        top:63/@rem;
+        top: 63/@rem;
         right: 53/@rem;
         width: 44/@rem;
         height: 44/@rem;
@@ -162,27 +161,27 @@
         background-repeat: no-repeat;
         background-size: cover;
       }
-      .head_content{
+      .head_content {
         width: 560/@rem;
         height: 160/@rem;
         position: absolute;
         top: 125/@rem;
         left: 30/@rem;
-        .head_content_div1{
+        .head_content_div1 {
           width: 156/@rem;
-          img{
+          img {
             width: 150/@rem;
             height: auto;
             border-radius: 50%;
           }
         }
-        .head_content_div2{
+        .head_content_div2 {
           width: 200/@rem;
           font-size: 28/@rem;
 
-          .ead_content_div2_img{
+          .ead_content_div2_img {
             position: absolute;
-            top:43/@rem;
+            top: 43/@rem;
             right: 13/@rem;
             width: 174/@rem;
             height: 59/@rem;
@@ -190,10 +189,10 @@
             background-repeat: no-repeat;
             background-size: cover;
           }
-          p{
+          p {
             color: #FFFFFF;
           }
-          span{
+          span {
             display: inline-block;
             margin-top: 15/@rem;
             background: salmon;
@@ -203,10 +202,10 @@
             height: 50/@rem;
             border-radius: 20/@rem;
             color: #FFFFFF;
-            .img{
+            .img {
               display: inline-block;
-              width:30/@rem;
-              height:30/@rem;
+              width: 30/@rem;
+              height: 30/@rem;
             }
           }
         }
@@ -232,6 +231,6 @@
     }
     .while {
       height: 135/@rem;
-      }
+    }
   }
 </style>
