@@ -45,7 +45,8 @@
 </script>
 <style scoped lang="less">
   @import "~common/css/public";
-  @rem:750/16rem;
+
+  @rem: 750/16rem;
   .search_container {
     width: 100%;
     background: #F4F5F7;
@@ -87,7 +88,7 @@
         margin-top: 10/@rem;
         margin-left: 75/@rem;
       }
-      .back_img{
+      .back_img {
         display: inline-block;
         width: 50/@rem;
         height: 50/@rem;
@@ -104,52 +105,52 @@
         height: 40/@rem;
         position: absolute;
         top: 25/@rem;
-        right:135/@rem;
+        right: 135/@rem;
         background-image: url("./search.png");
         background-repeat: no-repeat;
         background-size: cover;
       }
     }
-    .search_recommend{
+    .search_recommend {
       width: 100%;
       height: 320/@rem;
       margin-top: 10/@rem;
       background: #FBFBFD;
-      .recommend_title{
+      .recommend_title {
         width: 100%;
         position: relative;
-        i{
+        i {
           position: absolute;
-          top:16/@rem;
+          top: 16/@rem;
           left: 22/@rem;
           width: 44/@rem;
-          height:44/@rem;
+          height: 44/@rem;
           background-image: url("./rmss.png");
           background-repeat: no-repeat;
           background-size: cover;
         }
-        span{
+        span {
           margin-left: 85/@rem;
           font-size: 33/@rem;
           font-weight: 500;
-          color:#666A6D;
+          color: #666A6D;
         }
       }
-      .recommend_content{
+      .recommend_content {
         width: 100%;
         height: 260/@rem;
-        .content_list{
+        .content_list {
           width: 100%;
           margin-top: 10/@rem;
           display: flex;
           text-align: center;
           background: #F4F5F7;
-          span{
+          span {
             display: inline-block;
             flex: 1;
             height: 60/@rem;
             margin-top: 30/@rem;
-            color:#666A6D;
+            color: #666A6D;
             line-height: 60/@rem;
             background: #FFFFFF;
             font-size: 25/@rem;
@@ -158,7 +159,7 @@
         }
       }
     }
-    .history{
+    .history {
       background: #fff;
     }
   }

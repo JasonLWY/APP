@@ -28,10 +28,9 @@
         </div>
       </div>
     </div>
-    <!--<div class="while"></div>-->
+    <div class="while"></div>
   </div>
 </template>
-
 <script>
   import {mapState} from 'vuex'
 
@@ -100,21 +99,21 @@
           width: 100%;
           ul {
             width: 100%;
-            padding-left: 20/@rem;
+            padding-left: 0/@rem;
             margin-top: 30/@rem;
             li {
-              width: 210/@rem;
+              width: 235/@rem;
               height: 225/@rem;
               float: left;
-              padding-left: 15/@rem;
+              padding-left: 0/@rem;
               line-height: 40/@rem;
               text-align: center;
               a {
                 display: block;
-                width: 200/@rem;
-                height: 112/@rem;
-                margin-left: 15/@rem;
-                border: 1px solid red;
+                width: 220/@rem;
+                height: 122/@rem;
+                margin-left: 13/@rem;
+                border: 1px solid #e2e2e2;
                 text-align: center;
                 img {
                   display: inline-block;
@@ -127,7 +126,7 @@
                 display: inline-block;
                 font-size: 25/@rem;
                 width: 100%;
-                margin-left: 50/@rem;
+                margin-left: 10/@rem;
               }
               i {
                 font-size: 24/@rem;
@@ -141,7 +140,7 @@
       }
     }
     .while {
-      height: 5/@rem;
+      height: 145/@rem;
     }
   }
 </style>
