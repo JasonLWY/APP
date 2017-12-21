@@ -10,6 +10,7 @@ import Login from 'components/login/login'
 import Register from 'components/register/register'
 import Register_before from 'components/register_before/register_before'
 import Detail from 'components/detail/detail'
+import Brandsall from 'components/brandsall/brandsall'
 import Shop_list from 'components/shop_list/shop_list'
 Vue.use(Router)
 export default new Router({
@@ -61,6 +62,10 @@ export default new Router({
     {
       path: '/shop_list',
       component: Shop_list
+    },
+    {
+      path: '/brandsall',
+      component: Brandsall
     }
   ]
 })

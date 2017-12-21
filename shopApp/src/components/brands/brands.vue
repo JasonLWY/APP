@@ -28,6 +28,7 @@
         </div>
       </div>
     </div>
+    <div class="all" @click="to">全部</div>
     <div class="while"></div>
   </div>
 </template>
@@ -37,6 +38,11 @@
   export default {
     computed: {
       ...mapState(['brandslist'])
+    },
+    methods: {
+      to() {
+        this.$router.push('/brandsall')
+      }
     }
   }
 </script>
@@ -138,6 +144,19 @@
           }
         }
       }
+    }
+    .all {
+      position: fixed;
+      width: 80/@rem;
+      height: 80/@rem;
+      bottom: 130/@rem;
+      right: 30/@rem;
+      border-radius: 50%;
+      background: #888484;
+      color: #FFFFFF;
+      font-size: 22/@rem;
+      text-align: center;
+      line-height: 80/@rem;
     }
     .while {
       height: 145/@rem;
