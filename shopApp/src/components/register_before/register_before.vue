@@ -36,6 +36,7 @@
           this.alertText = '手机号码不正确';
           return
         }else{
+          this.$store.commit('newPhone', this.phoneNumber)
           this.$router.push('/register')
         }
       },

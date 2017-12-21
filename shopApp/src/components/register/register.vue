@@ -10,7 +10,7 @@
       <form action="#">
         <div class="form_d1">
           <label for="username"></label>
-          <input type="text" name="username" id="username" placeholder="手机号/邮箱">
+          <input type="text" name="username" id="username" placeholder="手机号/邮箱" :value="phoneNumber">
         </div>
         <div class="form_d2">
           <label for="code"></label>
@@ -51,6 +51,11 @@
         loadimage() {
           /*实现验证码点击重新加载*/
           this.$refs.randImage.src = "http://114.215.91.58/Blog/image.jsp?" + Math.random();
+        }
+      },
+      computed: {
+        phoneNumber() {
+          return this.$store.state.phoneNumber
         }
       }
     }

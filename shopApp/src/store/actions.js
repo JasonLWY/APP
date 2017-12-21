@@ -6,7 +6,8 @@ import {
   SERVICE_DYNAMIC,
   SERVICE_CATEGORY,
   SERVICE_CATEGORYLIST,
-  SERVICE_BRANDSLIST
+  SERVICE_BRANDSLIST,
+  SERVICE_PHONENUMBER
 } from './types'
 // const ERR_SUCCEED ="succeed"
 export default {
@@ -77,7 +78,7 @@ export default {
         callback && callback()
       }
     })
-  },
+  }
   /*获取menus数据*/
   /*reqGoods({commit}, callback) {
     /!*发起ajax请求*!/
