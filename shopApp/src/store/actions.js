@@ -1,4 +1,4 @@
-import {getGoods, getDynamic, getCategory, getCategoryList, getBrands} from 'api/index'
+import {getGoods, getDynamic, getCategory, getCategoryList, getBrands,getBrandsall} from 'api/index'
 import {ERR_SUCCEED} from "api/config";
 import {
   SERVICE_INDEX,
@@ -7,7 +7,8 @@ import {
   SERVICE_CATEGORY,
   SERVICE_CATEGORYLIST,
   SERVICE_BRANDSLIST,
-  SERVICE_PHONENUMBER
+  SERVICE_PHONENUMBER,
+  SERVICE_BRANDSALL
 } from './types'
 // const ERR_SUCCEED ="succeed"
 export default {
@@ -75,6 +76,18 @@ export default {
         const brandslist = result.brand
         // console.log(arr)
         commit(SERVICE_BRANDSLIST, {brandslist})
+        callback && callback()
+      }
+    })
+  },
+  reqBrandsall({commit}, callback) {
+    getBrandsall().then(response => {
+      //发起请求
+      const result = response.data
+      if (result.code === ERR_SUCCEED) {
+        const brandsall = result.brand
+        // console.log(arr)
+        commit(SERVICE_BRANDSALL, {brandsall})
         callback && callback()
       }
     })

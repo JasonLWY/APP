@@ -8,165 +8,16 @@
       <i class="head_right_img"></i>
     </div>
     <div class="content">
-      <div class="content-list">
+      <div class="content-list" v-for="item in brandsall">
         <div class="list">
-          <h2>A</h2>
-          <div class="item clearfix">
+          <h2>{{item.order}}</h2>
+          <div class="item clearfix" v-for="list in item.list">
             <div class="item-left f_l">
-              <img src="./item1.jpg" alt="">
+              <img :src="list.logo" alt="">
             </div>
             <div class="item-right f_l">
-              <p>艾尔</p>
-              <p>中国</p>
-            </div>
-          </div>
-          <div class="item clearfix">
-            <div class="item-left f_l">
-              <img src="./item1.jpg" alt="">
-            </div>
-            <div class="item-right f_l">
-              <p>艾尔</p>
-              <p>中国</p>
-            </div>
-          </div>
-          <div class="item clearfix">
-            <div class="item-left f_l">
-              <img src="./item1.jpg" alt="">
-            </div>
-            <div class="item-right f_l">
-              <p>艾尔</p>
-              <p>中国</p>
-            </div>
-          </div>
-          <div class="item clearfix">
-            <div class="item-left f_l">
-              <img src="./item1.jpg" alt="">
-            </div>
-            <div class="item-right f_l">
-              <p>艾尔</p>
-              <p>中国</p>
-            </div>
-          </div>
-          <div class="item clearfix">
-            <div class="item-left f_l">
-              <img src="./item1.jpg" alt="">
-            </div>
-            <div class="item-right f_l">
-              <p>艾尔</p>
-              <p>中国</p>
-            </div>
-          </div>
-          <div class="item clearfix">
-            <div class="item-left f_l">
-              <img src="./item1.jpg" alt="">
-            </div>
-            <div class="item-right f_l">
-              <p>艾尔</p>
-              <p>中国</p>
-            </div>
-          </div>
-          <div class="item clearfix">
-            <div class="item-left f_l">
-              <img src="./item1.jpg" alt="">
-            </div>
-            <div class="item-right f_l">
-              <p>艾尔</p>
-              <p>中国</p>
-            </div>
-          </div>
-          <div class="item clearfix">
-            <div class="item-left f_l">
-              <img src="./item1.jpg" alt="">
-            </div>
-            <div class="item-right f_l">
-              <p>艾尔</p>
-              <p>中国</p>
-            </div>
-          </div>
-          <div class="item clearfix">
-            <div class="item-left f_l">
-              <img src="./item1.jpg" alt="">
-            </div>
-            <div class="item-right f_l">
-              <p>艾尔</p>
-              <p>中国</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="content-list">
-        <div class="list">
-          <h2>B</h2>
-          <div class="item clearfix">
-            <div class="item-left f_l">
-              <img src="./item2.jpg" alt="">
-            </div>
-            <div class="item-right f_l">
-              <p>艾尔</p>
-              <p>中国</p>
-            </div>
-          </div>
-          <div class="item clearfix">
-            <div class="item-left f_l">
-              <img src="./item2.jpg" alt="">
-            </div>
-            <div class="item-right f_l">
-              <p>艾尔</p>
-              <p>中国</p>
-            </div>
-          </div>
-          <div class="item clearfix">
-            <div class="item-left f_l">
-              <img src="./item2.jpg" alt="">
-            </div>
-            <div class="item-right f_l">
-              <p>艾尔</p>
-              <p>中国</p>
-            </div>
-          </div>
-          <div class="item clearfix">
-            <div class="item-left f_l">
-              <img src="./item2.jpg" alt="">
-            </div>
-            <div class="item-right f_l">
-              <p>艾尔</p>
-              <p>中国</p>
-            </div>
-          </div>
-          <div class="item clearfix">
-            <div class="item-left f_l">
-              <img src="./item2.jpg" alt="">
-            </div>
-            <div class="item-right f_l">
-              <p>艾尔</p>
-              <p>中国</p>
-            </div>
-          </div>
-          <div class="item clearfix">
-            <div class="item-left f_l">
-              <img src="./item2.jpg" alt="">
-            </div>
-            <div class="item-right f_l">
-              <p>艾尔</p>
-              <p>中国</p>
-            </div>
-          </div>
-          <div class="item clearfix">
-            <div class="item-left f_l">
-              <img src="./item2.jpg" alt="">
-            </div>
-            <div class="item-right f_l">
-              <p>艾尔</p>
-              <p>中国</p>
-            </div>
-          </div>
-          <div class="item clearfix">
-            <div class="item-left f_l">
-              <img src="./item2.jpg" alt="">
-            </div>
-            <div class="item-right f_l">
-              <p>艾尔</p>
-              <p>中国</p>
+              <p>{{list.name}}</p>
+              <p>{{list.address}}</p>
             </div>
           </div>
         </div>
@@ -206,8 +57,15 @@
 </template>
 
 <script>
+  import {mapState} from 'vuex'
     export default {
-
+      mounted(){
+//        this.$store.dispatch('reqCategory')
+        this.$store.dispatch('reqBrandsall')
+      },
+      computed: {
+        ...mapState(['brandsall'])
+      },
       methods: {
         back() {
           //路由回跳实现
@@ -267,7 +125,6 @@
     }
     .content{
       width: 100%;
-
       .content-list{
         width: 100%;
         .list{

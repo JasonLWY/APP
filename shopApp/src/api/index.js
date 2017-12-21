@@ -51,3 +51,10 @@ export const getBrands = () => {
   // https://mallcdn.api.epet.com/v3/brand/list/main.html?pet_type=dog&system=wap&isWeb=1&version=303&_=1513697366601
   return axios.get(`${url}pet_type=dog&system=wap&isWeb=1&version=303&_=1513697366601`)
 }
+//brandsall data get
+export const getBrandsall = () => {
+  const url = '/api/v3/brand/list/main.html?'
+  // https://mallcdn.api.epet.com/v3/brand/list/main.html?pet_type=dog&system=wap&isWeb=1&version=303&_=1513697366601
+  return axios.get(`${url}do=getall&system=wap&isWeb=1&version=303&_=1513839083144`)
+}
+//https://mallcdn.api.epet.com/v3/brand/list/main.html?do=getall&system=wap&isWeb=1&version=303&_=1513839083144

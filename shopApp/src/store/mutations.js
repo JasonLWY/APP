@@ -6,7 +6,8 @@ import {
   SERVICE_CATEGORY,
   SERVICE_CATEGORYLIST,
   SERVICE_BRANDSLIST,
-  SERVICE_PHONENUMBER
+  SERVICE_PHONENUMBER,
+  SERVICE_BRANDSALL
 } from './types'
 
 export default {
@@ -27,6 +28,9 @@ export default {
   },
   [SERVICE_BRANDSLIST](state, {brandslist}) {
     state.brandslist = brandslist
+  },
+  [SERVICE_BRANDSALL](state, {brandsall}) {
+    state.brandsall = brandsall
   },
   [SERVICE_PHONENUMBER](state, {phoneNumber}) {
     state.phoneNumber = phoneNumber
