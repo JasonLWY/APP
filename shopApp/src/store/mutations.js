@@ -32,10 +32,10 @@ export default {
   [SERVICE_BRANDSALL](state, {brandsall}) {
     state.brandsall = brandsall
   },
-  [SERVICE_PHONENUMBER](state, {phoneNumber}) {
-    state.phoneNumber = phoneNumber
+  [SERVICE_PHONENUMBER](state, {phone}) {
+    state.phone = phone
   },
   newPhone(state, msg) {
-    state.phoneNumber = msg
+    state.phone = msg
   }
 }

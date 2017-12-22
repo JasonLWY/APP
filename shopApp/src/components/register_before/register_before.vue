@@ -2,12 +2,12 @@
   <div class="before_container">
     <div class="before_head">
       <i></i>
-      <input type="text" placeholder="请输入手机号码" name="phone" maxlength="11" v-model="phoneNumber">
+      <input type="text" placeholder="请输入手机号码" name="phone" maxlength="11" v-model="phone">
       <div class="hr"></div>
     </div>
     <div class="btn">
       <!--模拟a调到注册-->
-      <span @click="rigister" :class="{right_phone_number:rightPhoneNumber}"><router-link to="javascript:;">下一步</router-link></span>
+      <span @click="rigister" :class="{right_phone_number:rightPhoneNumber}"><a href="javascript:;">下一步</a></span>
     </div>
     <alert-tip v-if="showAlert" :showHide="showAlert" @closeTip="closeTip" :alertText="alertText"></alert-tip>
   </div>
@@ -17,7 +17,7 @@
   export default {
     data() {
       return {
-        phoneNumber: null,
+        phone: null,
         showAlert: false
       }
     },
@@ -25,7 +25,7 @@
     computed: {
       //判断手机号码
       rightPhoneNumber: function () {
-        return /^1\d{10}$/gi.test(this.phoneNumber)
+        return /^1\d{10}$/gi.test(this.phone)
       }
     },
     methods: {
@@ -36,7 +36,7 @@
           this.alertText = '手机号码不正确';
           return
         }else{
-          this.$store.commit('newPhone', this.phoneNumber)
+          this.$store.commit('newPhone', this.phone)
           this.$router.push('/register')
         }
       },

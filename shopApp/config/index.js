@@ -18,6 +18,13 @@ module.exports = {
           '^/api': '/'   // 将/api替换为/
         }
       },
+      '/api2': { // 对以/api开头的地址请求进行代理
+        target: 'http://localhost:8081', // 转发请求的基本地址
+        changeOrigin: true,  // 支持跨域
+        pathRewrite: {
+          '^/api2': '/'   // 将/api替换为/
+        }
+      },
       'apl': { // 对以/api开头的地址请求进行代理
         //https://mall.api.epet.com/v3/index/main.html?do=GetDynamicV315&pet_type=dog&version=358&system=wap&isWeb=1&_=1513655559493
         target: 'https://mall.api.epet.com/', // 转发请求的基本地址

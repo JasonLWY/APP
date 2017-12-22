@@ -8,28 +8,16 @@
       <i class="head_right_img"></i>
     </div>
     <div class="content">
-      <div class="content-list" v-for="item in brandsall">
-        <div class="list">
-          <h2>{{item.order}}</h2>
-          <div class="item clearfix" v-for="list in item.list">
-            <div class="item-left f_l">
-              <img :src="list.logo" alt="">
-            </div>
-            <div class="item-right f_l">
-              <p>{{list.name}}</p>
-              <p>{{list.address}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      <brands-list :data="brandsall" ref="list"></brands-list>
+      <!--<list-view :data="brandsall" ref="list"></list-view>-->
+   </div>
     <!--右侧导航实现-->
-    <div class="list-shortcut" @touchstart.stop.prevent="onShortcutTouchStart" @touchmove.stop.prevent="onShortcutTouchMove"
+    <!--<div class="list-shortcut" @touchstart.stop.prevent="onShortcutTouchStart" @touchmove.stop.prevent="onShortcutTouchMove"
          @touchend.stop>
       <ul>
-        <!--<li v-for="(item, index) in shortcutList" :data-index="index" class="item"
+        &lt;!&ndash;<li v-for="(item, index) in shortcutList" :data-index="index" class="item"
             :class="{'current':currentIndex===index}">{{item}}
-        </li>-->
+        </li>&ndash;&gt;
         <li class="item">A</li>
         <li class="item">A</li>
         <li class="item">A</li>
@@ -52,12 +40,14 @@
         <li class="item">A</li>
         <li class="item">A</li>
       </ul>
-    </div>
+    </div>-->
   </div>
 </template>
 
 <script>
   import {mapState} from 'vuex'
+  import BrandsList from 'page/brandslist/brands-list'
+//  import ListView from 'page/listview/listview'
     export default {
       mounted(){
 //        this.$store.dispatch('reqCategory')
@@ -71,17 +61,22 @@
           //路由回跳实现
           this.$router.back()
         }
+      },
+      components: {
+        BrandsList,
+//        ListView
       }
     }
 </script>
-<style lang="less">
+<style scoped lang="less">
   @rem: 750/16rem;
+  @import "~common/css/public.less";
   @import "~common/css/variable";
   .brandsall_container {
     width: 100%;
-    background: #FFFFFF;
     height: 100%;
     overflow: hidden;
+    background: #FFFFFF;
     .brandsall_header {
       background: #FFFFFF;
       text-align: center;
@@ -125,8 +120,10 @@
     }
     .content{
       width: 100%;
+      height: 100%;
       .content-list{
         width: 100%;
+        height: 100%;
         .list{
           width: 100%;
           h2{

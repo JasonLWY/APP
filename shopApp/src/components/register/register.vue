@@ -7,21 +7,21 @@
     </div>
     <!--表单-->
     <div class="content_form">
-      <form action="#">
+      <form action="">
         <div class="form_d1">
           <label for="username"></label>
-          <input type="text" name="username" id="username" placeholder="手机号/邮箱" :value="phoneNumber">
+          <input type="text" name="username" id="username" placeholder="手机号/邮箱" :value="phone">
         </div>
         <div class="form_d2">
           <label for="code"></label>
           <!--调用我自己的Blog验证码-->
-          <input type="text" id="code" name="code" placeholder="请输入要验证码">
+          <input type="text" id="code" name="code" placeholder="请输入要验证码" v-model="code">
           <img ref="randImage" @click="loadimage" src="http://114.215.91.58/Blog/image.jsp" alt="">
         </div>
         <div class="form_d3">
           <label for="message"></label>
           <input type="text" id="message" name="message" placeholder="短信验证码">
-          <img src="./code2.png" alt="">
+          <img @click="sendcode" src="./code2.png" alt="">
         </div>
         <div class="form_d4">
           <label for="password"></label>
@@ -30,7 +30,7 @@
         <div class="form_p1">
         </div>
         <div class="form_d5">
-          <input type="button" id="register_do" value="注册">
+          <input type="button" @click="register" id="register_do" value="注册">
         </div>
       </form>
     </div>
@@ -38,29 +38,39 @@
 </template>
 
 <script>
+  import axios from 'axios'
     export default {
       data() {
         return{
-//          src: ''
+          /*phone: '',*/
+          code: '',
+          status: '未登录'
         }
       },
       methods: {
         back() {
           this.$router.back()
         },
+        sendcode() {
+          const url = `/api2/sendcode?phone=${this.phone}`
+          axios.get(url).then(response => {
+            console.log('sendcode result ', response.data)
+          })
+        },
         loadimage() {
           /*实现验证码点击重新加载*/
           this.$refs.randImage.src = "http://114.215.91.58/Blog/image.jsp?" + Math.random();
-        }
+        },
+
       },
       computed: {
-        phoneNumber() {
-          return this.$store.state.phoneNumber
+        phone() {
+          return this.$store.state.phone
         }
       }
     }
 </script>
-<style lang="less">
+<style scoped lang="less">
   @rem:750/16rem;
   .register_container {
     width: 100%;

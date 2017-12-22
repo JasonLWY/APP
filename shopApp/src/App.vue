@@ -26,4 +26,5 @@
 </script>
 
 <style scoped lang="less">
+  @import "~common/css/public.less";
 </style>

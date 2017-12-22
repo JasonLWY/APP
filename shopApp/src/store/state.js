@@ -6,6 +6,6 @@ export default {
   category: {},
   categorylist: {},
   brandslist: {},
-  phoneNumber: '',
+  phone: '',
   brandsall: {}
 }

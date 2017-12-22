@@ -87,7 +87,7 @@ module.exports = {
       {
         test: /\.sass$/,
         loaders: ['style', 'css', 'sass']
-      }
+      },
     ]
   },
   node: {
