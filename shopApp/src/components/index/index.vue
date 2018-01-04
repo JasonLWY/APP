@@ -53,36 +53,36 @@
     </div>-->
     <!--体验馆组件-->
     <index-experience></index-experience>
-    <div class="index_experience_hall adorable_pet">
-      <i class="play"></i>
-      <div class="experience_hall_top adorable_pet_top">
-        <i class="img_left"></i>
-        <i class="img_right"></i>
-      </div>
-      <!--{{goods[32].value} [{}]}//需要遍历-->
-      <div class="sale_list adorable_pet_list" v-for="item in goods[37].value">
-        <img :src="item.cover.image" alt="">
-      </div>
-      <div v-for="item in goods[37].value">
-        <div class="adorable_pet_text">{{item.share_target.param.title}}</div>
-        <div class="adorable_pet_look"><i>观看数</i><i></i><i>{{item.visit}}</i></div>
-      </div>
-    </div>
+    <!--<div class="index_experience_hall adorable_pet">-->
+      <!--<i class="play"></i>-->
+      <!--<div class="experience_hall_top adorable_pet_top">-->
+        <!--<i class="img_left"></i>-->
+        <!--<i class="img_right"></i>-->
+      <!--</div>-->
+      <!--&lt;!&ndash;{{goods[32].value} [{}]}//需要遍历&ndash;&gt;-->
+      <!--<div class="sale_list adorable_pet_list" v-for="item in goods[37].value">-->
+        <!--<img :src="item.cover.image" alt="">-->
+      <!--</div>-->
+      <!--<div v-for="item in goods[37].value">-->
+        <!--<div class="adorable_pet_text">{{item.share_target.param.title}}</div>-->
+        <!--<div class="adorable_pet_look"><i>观看数</i><i></i><i>{{item.visit}}</i></div>-->
+      <!--</div>-->
+    <!--</div>-->
     <!--小剧场 video-->
-    <div class="index_experience_hall adorable_pet Theatre">
-      <i class="play"></i>
-      <div class="experience_hall_top adorable_pet_top Theatre_top">
-        <i class="img_left"></i>
-        <i class="img_right"></i>
-      </div>
-      <div class="sale_list adorable_pet_list" v-for="item in goods[40].value">
-        <img :src="item.cover.image" alt="">
-      </div>
-      <div v-for="item in goods[40].value">
-        <div class="adorable_pet_text">{{item.share_target.param.title}}</div>
-        <div class="adorable_pet_look"><i>观看数</i><i></i><i>{{item.visit}}</i></div>
-      </div>
-    </div>
+    <!--<div class="index_experience_hall adorable_pet Theatre">-->
+      <!--<i class="play"></i>-->
+      <!--<div class="experience_hall_top adorable_pet_top Theatre_top">-->
+        <!--<i class="img_left"></i>-->
+        <!--<i class="img_right"></i>-->
+      <!--</div>-->
+      <!--<div class="sale_list adorable_pet_list" v-for="item in goods[40].value">-->
+        <!--<img :src="item.cover.image" alt="">-->
+      <!--</div>-->
+      <!--<div v-for="item in goods[40].value">-->
+        <!--<div class="adorable_pet_text">{{item.share_target.param.title}}</div>-->
+        <!--<div class="adorable_pet_look"><i>观看数</i><i></i><i>{{item.visit}}</i></div>-->
+      <!--</div>-->
+    <!--</div>-->
     <!--留白-->
     <div class="while"></div>
   </div>

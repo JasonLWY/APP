@@ -16,7 +16,7 @@
       FFooter
     },
     mounted () {
-      // 发送ajax请求获取seller并更新状态
+      // 发送ajax请求获取并更新状态
       this.$store.dispatch('reqDynamic')
       this.$store.dispatch('reqCategory')
       this.$store.dispatch('reqCategoryList')

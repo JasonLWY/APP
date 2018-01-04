@@ -14,6 +14,7 @@ import Brandsall from 'components/brandsall/brandsall'
 import Shop_list from 'components/shop_list/shop_list'
 Vue.use(Router)
 export default new Router({
+  base: '/dist/',
   routes: [
     {
       path: '/',
